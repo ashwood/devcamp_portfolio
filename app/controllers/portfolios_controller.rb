@@ -20,7 +20,8 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: "Your portfoio item is now live." }
+        format.html { redirect_to portfolios_path,
+          notice: "Your portfoio item is now live." }
       else
         format.html { render :new }
       end
@@ -33,7 +34,8 @@ class PortfoliosController < ApplicationController
   def update
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: "The record has been successfully updated." }
+        format.html { redirect_to portfolios_path,
+          notice: "The record has been successfully updated." }
       else
         format.html { render :edit }
       end
