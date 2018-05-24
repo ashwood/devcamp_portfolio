@@ -28,15 +28,17 @@ html
     .page-container
       .sidebar-content-container
         .sidebar-content
-          .header
-          .sub-header
-          .nav-list-container * 2
+          .title
+          .subtitle
+          .nav-list-container * 3
             .nav-list-title
             .nav-list-items
               a
       .page-content-container
         .page-content
+          ...
         .footer
+          .copyright
 
 
 Miscellaneous rules:
@@ -47,7 +49,7 @@ Miscellaneous rules:
 */
 
 html {
-font-size: 10px;
+font-size: 62.5%;
 font-family: 'Halant', serif;
 color: $black-80;
 }
@@ -60,7 +62,6 @@ body {
 
 .page-container {
   display: flex;
-  flex-direction: row;
   height: 100vh;
   width: 100%;
   max-width: 1200px;
@@ -73,12 +74,12 @@ body {
   .sidebar-content {
     padding-top: 60px;
 
-    .header {
+    .title {
       font-size: 2.4rem;
       line-height: 2.8rem;
     }
 
-    .sub-header {
+    .subtitle {
       padding-top: 20px;
       font-size: 1.4rem;
     }
@@ -131,7 +132,7 @@ body {
     text-align: center;
     padding: 60px 0 60px;
     font-size: 12px;
-    a { color: $black-30; }
+    color: $black-30;
   }
 
 }
@@ -156,10 +157,10 @@ summary, time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-/*article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
-}*/
+}
 
 body {
   line-height: 1;
@@ -175,10 +176,10 @@ q:before, q:after {
   content: none;
 }
 
-/*table {
+table {
   border-collapse: collapse;
   border-spacing: 0;
-}*/
+}
 
 strong, b { font-weight: bold; }
 
