@@ -1,48 +1,5 @@
-<div class="page-container">
+<h1>Portfolio Items</h1>
 
-  <header class="sidebar-content-container">
-    <div class="sidebar-content">
+<%= link_to "Create New Portfolio", new_portfolio_path if logged_in?(:site_admin)  %>
 
-      <p class="header">Devcamp Portfolio</p>
-      <p class="sub-header">Welcome to my portfolio.</p>
-
-      <div class="nav-list-container">
-        <p class="nav-list-title">Skills</p>
-        <ul class="nav-list-items">
-          <a href="#">Angular</a>
-          <a href="#">Ruby on Rails</a>
-          <a href="#">React JS</a>
-          <a href="#">HTML & CSS</a>
-        </ul>
-      </div>
-
-      <div class="nav-list-container">
-        <ul class="nav-list-items">
-          <a href="#">About me</a>
-          <a href="#">Get in touch</a>
-        </ul>
-      </div>
-
-    </div>
-
-  </header>
-
-  <div class="page-content-container">
-
-    <div class="page-content">
-      <%= link_to "Create New Portfolio", new_portfolio_path if logged_in?(:site_admin)  %>
-      <%= render partial: 'portfolio_item', collection: @portfolio_items %>
-    </div>
-
-    <footer class="footer">
-      <ul class="footer-nav">
-        <a href="#">Features</a>
-        <a href="#">Contact</a>
-        <a href="#">Features</a>
-        <a href="#">Contact</a>
-      </ul>
-    </footer>
-
-  </div>
-
-</div>
+<%= render partial: 'portfolio_item', collection: @portfolio_items %>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
@@ -12,8 +13,26 @@
   </head>
 
   <body>
+    <div class="page-container">
 
-    <%= yield %>
+      <%= render 'shared/portfolio_nav' %>
 
+      <div class="page-content-container">
+
+        <div class="page-content">
+          <%= yield %>
+        </div>
+
+        <footer class="footer">
+            <%= copyright_generator %>
+        </footer>
+
+      </div>
+
+    </div>
   </body>
+
 </html>
+
+
+
