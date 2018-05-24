@@ -7,27 +7,27 @@
       <div class="nav-list-container">
         <p class="nav-list-title">Skills</p>
         <ul class="nav-list-items">
-          <a href="#">Angular</a>
-          <a href="#">Ruby on Rails</a>
-          <a href="#">React JS</a>
-          <a href="#">HTML & CSS</a>
+          <li><a href="#">Angular</a></li>
+          <li><a href="#">Ruby on Rails</a></li>
+          <li><a class="active" href="#">React JS</a></li>
+          <li><a href="#">HTML & CSS</a></li>
         </ul>
       </div>
 
       <div class="nav-list-container">
         <ul class="nav-list-items">
-          <%= link_to "Home", root_path %>
-          <%= link_to "About", about_me_path %>
-          <%= link_to "Contact", contact_path %>
-          <%= link_to "Blog", blogs_path %>
-          <%= link_to "Portfolio", portfolios_path %>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "About", about_me_path %></li>
+          <li><%= link_to "Contact", contact_path %></li>
+          <li><%= link_to "Blog", blogs_path %></li>
+          <li><%= link_to "Portfolio", portfolios_path %></li>
         </ul>
       </div>
 
       <div class="nav-list-container">
         <ul class="nav-list-items">
-          <%= login_helper %>
-          <%= source_helper("application") %>
+          <li><%= login_helper %></li>
+          <li><%= source_helper("application") %></li>
         </ul>
       </div>
 

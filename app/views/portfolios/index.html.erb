@@ -1,5 +1,12 @@
-<h1>Portfolio Items</h1>
-
-<%= link_to "Create New Portfolio", new_portfolio_path if logged_in?(:site_admin)  %>
-
+<div class="portfolio-grid">
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+
+<div class="portfolio-grid-item">
+  <div class="portfolio-item-new">
+    <%= link_to "Create portfolio", new_portfolio_path if logged_in?(:site_admin)  %>
+  </div>
+</div>
+
+</div>
+
+
