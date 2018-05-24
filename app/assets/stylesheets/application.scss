@@ -85,13 +85,43 @@ body {
       text-align: center;
       padding: 60px 0;
       .nav-list-items {
+
         a {
-          color: $white-90;
+          color: $white-80;
           font-family: 'Tajawal', sans-serif;
           letter-spacing: .05rem;
           font-size: 1.4rem;
           margin: 0 2rem;
+          display: inline-block;
+
+          &::after {
+            background-color: $white-50;
+            content: "";
+            display: block;
+            height: 1px;
+            position: relative;
+            top: 5;
+            width: 0;
+            transition: width linear 450ms;
+          }
+
+          &:hover {
+            color: $white-90;
+            &::after {
+              width: 100%;
+              transition: width linear 450ms;
+            }
+          }
+
+          &.active {
+            color: $white-90;
+            &::after {
+              width: 100%;
+            }
+          }
         }
+
+
       }
     }
   }
