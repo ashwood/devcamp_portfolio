@@ -1,26 +1,12 @@
-  <header class="header-content-container">
-    <div class="header-content">
-
-      <p class="title">Devcamp Portfolio</p>
-      <p class="subtitle">Welcome to my website.</p>
-
-      <div class="nav-list-container">
-        <ul class="nav-list-items">
+<header class="header-content-container">
+    <div class="nav-list-container">
+      <ul class="nav-list-items">
           <%= link_to "Home", root_path %>
           <%= link_to "About", about_me_path %>
           <%= link_to "Contact", contact_path %>
           <%= link_to "Blog", blogs_path %>
           <%= link_to "Portfolio", portfolios_path %>
-        </ul>
-      </div>
-
-      <div class="nav-list-container">
-        <ul class="nav-list-items">
           <%= login_helper %>
-          <%= source_helper("application") %>
-        </ul>
-      </div>
-
+      </ul>
     </div>
-
-  </header>
+</header>

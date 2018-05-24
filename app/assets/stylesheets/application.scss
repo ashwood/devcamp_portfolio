@@ -18,7 +18,17 @@ $black-70: rgba(0, 0, 0, 0.7);
 $black-80: rgba(0, 0, 0, 0.8);
 $black-90: rgba(0, 0, 0, 0.9);
 
+$white-10: rgba(255, 255, 255, 0.1);
+$white-20: rgba(255, 255, 255, 0.2);
+$white-30: rgba(255, 255, 255, 0.3);
+$white-40: rgba(255, 255, 255, 0.4);
+$white-50: rgba(255, 255, 255, 0.5);
+$white-60: rgba(255, 255, 255, 0.6);
+$white-70: rgba(255, 255, 255, 0.7);
+$white-80: rgba(255, 255, 255, 0.8);
 $white-90: rgba(255, 255, 255, 0.9);
+
+
 
 /*
 Layout is designed using flexbox. Overall structure is built using a simple flexbox model. The body tag centeres the content using flex(column). The sidebar and the page content container are split into two columns by using flex(row) on page-container. The max width for page content is 1200 pixels. If the display width exceeds the max-width, the content will remain centered. The page content container uses flex(column) to seperate the page content from the footer.
@@ -28,19 +38,18 @@ Top down structure is as follows:
 html
   body
     .page-container
-      .hero-content-container
-        .hero-content
       .header-content-container
-        .header-content
-          .title
-          .subtitle
-          .nav-list-container * 2
-            .nav-list-title
-            .nav-list-items
-              a
+        .nav-list-container
+          .nav-list-items
+            a
       .page-content-container
         .page-content
-        .footer
+          .logo
+          .title
+            ::after
+          .subtitle
+      .footer-content-container
+          .copyright
 
 
 Miscellaneous rules:
@@ -53,7 +62,7 @@ Miscellaneous rules:
 html {
 font-size: 10px;
 font-family: 'Halant', serif;
-color: $black-80;
+color: $white-80;
 }
 
 body {
@@ -67,25 +76,14 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: $black-10;
-}
 
-.header-content-container {
 
-  width: 100%;
-  position: fixed;
-
+  .header-content-container {
+    width: 100%;
+    position: fixed;
     .nav-list-container {
       text-align: center;
       padding: 60px 0;
-
-      .nav-list-title {
-        font-size: 2rem;
-        color: $black-80;
-        font-family: 'Tajawal', sans-serif;
-        font-weight: 300;
-        text-transform: uppercase;
-      }
-
       .nav-list-items {
         a {
           color: $white-90;
@@ -96,108 +94,102 @@ body {
         }
       }
     }
-}
+  }
 
-
-.hero-content-container {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .page-content-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient($black-60, $black-70),
-                url(mountains.jpeg);
-  background-position: top;
-  background-size: cover;
+                  url(mountains.jpeg);
+    background-position: top;
+    background-size: cover;
 
-  .hero-content {
-    text-align: center;
-    color: $white-90;
+    .page-content {
+      text-align: center;
+      color: $white-70;
 
-    .logo {
-      height: 80px;
+      .logo {
+        height: 80px;
+      }
+
+      .title {
+        padding-top: 60px;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-family: 'Tajawal', sans-serif;
+
+        &::after {
+          content: "  ";
+          width: 100px;
+          border-bottom: 1px solid $white-70;
+          display: block;
+          margin: 0 auto;
+          padding-top: 40px;
+        }
+      }
+
+      .subtitle {
+        padding: 40px 0;
+        font-size: 1.4rem;
+        width: 400px;
+        line-height: 2rem;
+      }
+
     }
 
-    .title {
-      padding-top: 30px;
-      font-size: 2.4rem;
-      line-height: 2.8rem;
-    }
-
-    .subtitle {
-      padding-top: 20px;
-      font-size: 1.4rem;
-    }
   }
+
+  .footer-content-container {
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      padding: 60px 0;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 1.1rem;
+      color: $white-40;
+    }
 }
 
-.page-content-container {
-  display: flex;
-  flex-direction: column;
-  width: 980px;
-
-  .page-content {
-    padding: 40px 0;
-  }
-
-  .footer {
-    width: 100%;
-    text-align: center;
-    padding: 60px 0 60px;
-    font-size: 12px;
-    a { color: $black-30; }
-  }
-
-}
 
 
 /* ------------- CSS RESETS ------------- */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption,
-tbody, tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption, footer,
-header, hgroup, menu, nav, output, ruby, section,
-summary, time, mark, audio, video {
+*,
+*::before,
+::after {
   border: 0;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-/*article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}*/
-
-body {
-  line-height: 1;
+  box-sizing: inherit;
 }
 
-blockquote, q {
-  quotes: none;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 
-/*table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}*/
-
-strong, b { font-weight: bold; }
-
-em, i { font-style: italic; }
-
-a img { border: none; }
-
-a, a:hover, a:focus { text-decoration: none; }
+input,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

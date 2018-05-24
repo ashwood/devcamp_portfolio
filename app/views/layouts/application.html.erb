@@ -17,7 +17,22 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+    <div class="page-container">
+
+      <%= render 'shared/application_nav' %>
+
+      <div class="page-content-container">
+        <div class="page-content">
+          <%= yield %>
+        </div>
+      </div>
+
+
+      <footer class="footer-content-container">
+        <%= copyright_generator %>
+      </footer>
+
+    </div>
 
   </body>
 </html>
