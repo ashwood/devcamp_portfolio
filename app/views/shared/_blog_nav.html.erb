@@ -1,0 +1,30 @@
+<header class="header-content-container">
+    <div class="nav-list-container">
+      <ul class="nav-list-items">
+        <%= link_to image_tag ('favicon.png'), class: 'navigation-logo' %>
+      </ul>
+      <ul class="nav-list-items">
+        <%= login_helper %>
+      </ul>
+    </div>
+
+    <div class="nav-list-container">
+      <ul class="nav-list-items">
+        <a href="#" class="navigation-brand">Devcamp Portfolio Blog</a>
+      </ul>
+    </div>
+
+    <div class="nav-list-container">
+      <ul class="nav-list-items">
+          <%= link_to "Home", root_path, :class => active_class(root_path) %>
+          <%= link_to "About", about_me_path, :class => active_class(about_me_path) %>
+          <%= link_to "Contact", contact_path, :class => active_class(contact_path) %>
+          <%= link_to "Blog", blogs_path, :class => active_class(blogs_path)  %>
+          <%= link_to "Portfolio", portfolios_path %>
+      </ul>
+    </div>
+</header>
+
+
+
+

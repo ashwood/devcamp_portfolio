@@ -63,6 +63,7 @@ html {
 font-size: 10px;
 font-family: 'Halant', serif;
 color: $white-80;
+width: 100%;
 }
 
 body {
@@ -71,7 +72,7 @@ body {
 }
 
 .page-container {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,9 +82,14 @@ body {
   .header-content-container {
     width: 100%;
     position: fixed;
+
     .nav-list-container {
-      text-align: center;
       padding: 60px 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
       .nav-list-items {
 
         a {
@@ -91,7 +97,7 @@ body {
           font-family: 'Tajawal', sans-serif;
           letter-spacing: .05rem;
           font-size: 1.4rem;
-          margin: 0 2rem;
+          margin: 0 2rem 0 0;
           display: inline-block;
 
           &::after {
@@ -119,8 +125,6 @@ body {
               width: 100%;
             }
           }
-        }
-
 
       }
     }
@@ -174,7 +178,6 @@ body {
   }
 
   .footer-content-container {
-      width: 100%;
       text-align: center;
       position: fixed;
       bottom: 0;
@@ -184,8 +187,6 @@ body {
       color: $white-40;
     }
 }
-
-
 
 /* ------------- CSS RESETS ------------- */
 

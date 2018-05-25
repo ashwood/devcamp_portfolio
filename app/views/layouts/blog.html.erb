@@ -15,12 +15,20 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= login_helper %>
+    <div class="page-container">
 
-    <%= yield %>
+      <%= render 'shared/blog_nav' %>
 
-    <%= render 'shared/nav', location: 'bottom' %>
+      <div class="page-content-container">
+        <div class="page-content">
+         <%= yield %>
+        </div>
+      </div>
 
-    <%= source_helper("blog") %>
+      <footer class="footer-content-container">
+        <%= copyright_generator %>
+      </footer>
+
+    </div>
   </body>
 </html>
