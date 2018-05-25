@@ -60,10 +60,9 @@ Miscellaneous rules:
 */
 
 html {
-font-size: 10px;
-font-family: 'Halant', serif;
 color: $white-80;
-width: 100%;
+font-family: 'Halant', serif;
+font-size: 10px;
 }
 
 body {
@@ -72,105 +71,121 @@ body {
 }
 
 .page-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background-color: $black-10;
-
+  display: flex;
+  flex-direction: column;
 
   .header-content-container {
-    width: 100%;
     position: fixed;
 
     .nav-list-container {
-      padding: 60px 0;
       display: flex;
       justify-content: center;
-      width: 100%;
+      padding: 60px 0;
     }
 
-      .nav-list-items {
+    .nav-list-items {
 
-        a {
-          color: $white-80;
-          font-family: 'Tajawal', sans-serif;
-          letter-spacing: .05rem;
-          font-size: 1.4rem;
-          margin: 0 2rem 0 0;
-          display: inline-block;
+      a {
+        color: $white-80;
+        font-family: 'Tajawal', sans-serif;
+        letter-spacing: .05rem;
+        font-size: 1.4rem;
+        + a { margin-left: 4.5rem; }
+        display: inline-block;
+
+        &::after {
+          background-color: $white-50;
+          content: "";
+          display: block;
+          height: 1px;
+          position: relative;
+          top: 5;
+          width: 0;
+          transition: width linear 450ms;
+        }
+
+        &:hover {
+          color: $white-90;
 
           &::after {
-            background-color: $white-50;
-            content: "";
-            display: block;
-            height: 1px;
-            position: relative;
-            top: 5;
-            width: 0;
+            width: 100%;
             transition: width linear 450ms;
           }
+        }
 
-          &:hover {
-            color: $white-90;
-            &::after {
-              width: 100%;
-              transition: width linear 450ms;
-            }
-          }
+        &.active {
+          color: $white-90;
 
-          &.active {
-            color: $white-90;
-            &::after {
-              width: 100%;
-            }
+          &::after {
+            width: 100%;
           }
+        }
 
       }
     }
   }
 
   .page-content-container {
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
     align-items: center;
     background: linear-gradient($black-60, $black-70),
                   url(mountains.jpeg);
     background-position: top;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
 
     .page-content {
-      text-align: center;
       color: $white-70;
+      text-align: center;
 
       .logo {
         height: 80px;
       }
 
       .title {
-        padding-top: 60px;
-        font-size: 2.4rem;
-        text-transform: uppercase;
-        letter-spacing: .2rem;
         font-family: 'Tajawal', sans-serif;
+        font-size: 2.4rem;
+        letter-spacing: .2rem;
+        margin: 6rem 0 0 0;
+        text-transform: uppercase;
 
         &::after {
-          content: " ";
-          width: 100px;
           border-bottom: 1px solid $white-70;
+          content: " ";
           display: block;
-          margin: 0 auto;
-          padding-top: 40px;
+          margin: 5rem auto 0;
+          width: 100px;
+        }
+        + .transparent-button {
+          margin: 6rem;
         }
       }
 
       .subtitle {
-        padding: 40px 0;
         font-size: 1.4rem;
-        width: 400px;
         line-height: 2rem;
+        margin: 4rem 0 0;
+        width: 400px;
+      }
+
+      .transparent-button {
+        font-family: 'Tajawal', sans-serif;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        margin: 6rem 0;
+        border: 1px solid $white-50;
+        padding: 1.2rem 3rem .8rem;
+        display: inline-block;
+        color: $white-70;
+        &:hover {
+          border: 1px solid $white-60;
+          color: $white-80;
+          transition: all .2s
+        }
       }
 
     }
@@ -178,13 +193,13 @@ body {
   }
 
   .footer-content-container {
-      text-align: center;
-      position: fixed;
       bottom: 0;
-      padding: 60px 0;
+      color: $white-40;
       font-family: 'Tajawal', sans-serif;
       font-size: 1.1rem;
-      color: $white-40;
+      padding: 60px 0;
+      position: fixed;
+      text-align: center;
     }
 }
 
@@ -194,10 +209,10 @@ body {
 *::before,
 ::after {
   border: 0;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  box-sizing: inherit;
 }
 
 html {
@@ -214,13 +229,13 @@ a:focus {
 input,
 textarea,
 button {
-  border: 0;
-  border-radius: 0;
-  outline: none;
   appearance: none;
-  &:hover,
+  border-radius: 0;
+  border: 0;
+  outline: none;
   &:active,
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
   }
 }
