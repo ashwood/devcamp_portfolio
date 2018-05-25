@@ -1,12 +1,13 @@
-<div class="portfolio-grid">
+<div class="portfolio-grid-index">
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
 
+<% if logged_in?(:site_admin) %>
 <div class="portfolio-grid-item">
   <div class="portfolio-item-new">
-    <%= link_to "Create portfolio", new_portfolio_path if logged_in?(:site_admin)  %>
+    <%= link_to "Create portfolio", new_portfolio_path %>
   </div>
 </div>
-
+<% end %>
 </div>
 
 

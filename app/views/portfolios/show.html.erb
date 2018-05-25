@@ -1,17 +1,37 @@
-<%= image_tag @portfolio_item.main_image %>
+<div class="portfolio-grid-show">
 
-<h1><%= @portfolio_item.title %></h1>
+  <div class="portfolio-grid-item">
+    <%= image_tag ('mountains.jpeg'), class: 'main-image' %>
+    <div class="portfolio-nav-links">
+  <% if logged_in?(:site_admin) %>
+    <%= link_to "Edit Portfolio", edit_portfolio_path(@portfolio_item) %>
+    <%= link_to "Delete Portfolio", portfolio_path(@portfolio_item),
+                                  method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+  <%= link_to "Back to Portfolios", portfolios_path %>
+</div>
 
-<em><%= @portfolio_item.subtitle %></em>
+  </div>
 
-<p><%= @portfolio_item.body %></p>
+  <div class="portfolio-grid-item">
 
-<h2>Technologies Used</h2>
+    <%= image_tag ('mist.jpeg'), class: 'thumb-image' %>
 
-<% @portfolio_item.technologies.each do |t| %>
-  <p><%= t.name %></p>
-<% end %>
+    <div class="portfolio-item-header">
+      <p class="portfolio-item-title"><%= @portfolio_item.title %></p>
+      <p class="portfolio-item-subtitle"><%= @portfolio_item.subtitle %></p>
+      <p class="portfolio-item-date"><%= @portfolio_item.created_at.strftime("%B, %Y") %></p>
+    </div>
 
-<%= link_to "Edit Portfolio", edit_portfolio_path(@portfolio_item) if logged_in?(:site_admin)  %>
-<%= link_to "Delete Portfolio", portfolio_path(@portfolio_item),
-    method: :delete, data: { confirm: "Are you sure?" } if logged_in?(:site_admin) %>
+    <p class="portfolio-item-body"><%= @portfolio_item.body %></p>
+
+
+  <div class="portfolio-item-technologies">
+    <p>Technologies used </p>
+    <% @portfolio_item.technologies.each do |t| %>
+      <li><%= t.name %></li>
+    <% end %>
+  </div>
+
+  </div>
+</div>
