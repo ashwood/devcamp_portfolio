@@ -1,0 +1,86 @@
+.form {
+  @include secondary-font;
+  background-color: white;
+  padding: 3rem 6rem 2rem;
+  min-width: 42rem;
+  border-radius: 3px;
+  color: $black-90;
+  text-align: left;
+  font-size: 120%;
+
+
+  &__title {
+    text-align: center;
+    margin: 0 0 2rem 0;
+  }
+
+  &__field {
+
+  }
+
+  &__field + .form__field {
+    margin: 4rem 0 0 0;
+  }
+
+  &__label {
+    display: block;
+    font-weight: bold;
+    opacity: 0.7;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin: .8rem 0 0 0;
+    padding: 0 0 .4rem 0;
+    border-bottom: 1px solid $black-40;
+    background-color: transparent;
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      border-color: $black-70;
+    }
+  }
+
+  &__checkbox {
+    visibility: hidden;
+    opacity: .7;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:checked {
+      opacity: .9;
+    }
+
+    &:after {
+      content: '○';
+      font-size: 1.4rem;
+      line-height: 1rem;
+      padding: 0 4rem 0 0;
+      opacity: .8;
+      visibility: visible;
+    }
+
+    &:checked::after {
+      content: '◉';
+    }
+
+  }
+
+  &__remember-me {
+    margin: 0 0 0 .4rem;
+  }
+
+  &__button {
+    margin: 3rem auto;
+  }
+
+  &__link {
+    line-height: 1.8rem;
+    color: inherit;
+  }
+
+}
