@@ -1,17 +1,25 @@
-
-<div class="portfolio-grid-item">
+<div class="portfolio-card">
 
   <%= image_tag ("#{portfolio_item.thumb_image unless
-    portfolio_item.thumb_image.nil?}"), class: "thumb-image"  %>
+                    portfolio_item.thumb_image.nil?}"),
+                    class: "portfolio-card__thumb-image" %>
 
-  <p class="portfolio-item-title"><%= link_to portfolio_item.title,
-    portfolio_show_path(portfolio_item) %></p>
-  <p class="portfolio-item-body"><%= portfolio_item.body.truncate_words(30) %></p>
-  <p class="portfolio-item-date"><%= portfolio_item.created_at.strftime("%B, %Y") %></p>
-  <p class="portfolio-item-subtitle"><%= portfolio_item.subtitle %></p>
+  <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item),
+                                    class: 'portfolio-card__title' %>
 
-<!--   <%= link_to "Edit Portfolio", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin)  %>
-  <%= link_to "Delete Portfolio", portfolio_path(portfolio_item),
-      method: :delete, data: { confirm: "Are you sure?" } if logged_in?(:site_admin) %> -->
+  <p class="portfolio-card__subtitle"><%= portfolio_item.subtitle %></p>
+  <p class="portfolio-card__body"><%= portfolio_item.body.truncate_words(18) %></p>
+  <p class="portfolio-card__date"><%= portfolio_item.created_at.strftime("%B, %Y") %></p>
+
+    <% if logged_in?(:site_admin) %>
+
+    <%= link_to "Edit Portfolio", edit_portfolio_path(portfolio_item),
+        class: 'portfolio-card_link' %>
+
+    <%= link_to "Delete Portfolio", portfolio_path(portfolio_item),
+        method: :delete, data: { confirm: "Are you sure?" },
+        class: "portfolio-card_link" %>
+
+    <% end %>
 
 </div>

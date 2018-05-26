@@ -1,37 +1,39 @@
-<div class="portfolio-grid-show">
+<div class="portfolio">
 
-  <div class="portfolio-grid-item">
-    <%= image_tag ('mountains.jpeg'), class: 'main-image' %>
-    <div class="portfolio-nav-links">
-  <% if logged_in?(:site_admin) %>
+  <div class="portfolio-column-1">
+    <%= image_tag ('mountains.jpeg'), class: 'portfolio__main-image' %>
+  <div class="portfolio__links">
+
+    <% if logged_in?(:site_admin) %>
     <%= link_to "Edit Portfolio", edit_portfolio_path(@portfolio_item) %>
     <%= link_to "Delete Portfolio", portfolio_path(@portfolio_item),
-                                  method: :delete, data: { confirm: "Are you sure?" } %>
-  <% end %>
-  <%= link_to "Back to Portfolios", portfolios_path %>
-</div>
+      method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
+
+    <%= link_to "Back to Portfolios", portfolios_path %>
+  </div>
 
   </div>
 
-  <div class="portfolio-grid-item">
+  <div class="portfolio_column-1">
 
-    <%= image_tag ('mist.jpeg'), class: 'thumb-image' %>
+    <%= image_tag ('mist.jpeg'), class: 'portfolio__thumb-image' %>
 
-    <div class="portfolio-item-header">
-      <p class="portfolio-item-title"><%= @portfolio_item.title %></p>
-      <p class="portfolio-item-subtitle"><%= @portfolio_item.subtitle %></p>
-      <p class="portfolio-item-date"><%= @portfolio_item.created_at.strftime("%B, %Y") %></p>
+    <div class="portfolio__header">
+      <h1 class="portfolio__title"><%= @portfolio_item.title %></h1>
+      <h2 class="portfolio__subtitle"><%= @portfolio_item.subtitle %></h2>
+      <p class="portfolio__date"><%= @portfolio_item.created_at.strftime("%B, %Y") %></p>
     </div>
 
-    <p class="portfolio-item-body"><%= @portfolio_item.body %></p>
+    <p class="portfolio__body"><%= @portfolio_item.body %></p>
 
+    <div class="portfolio__technologies">
+      <h1 class="portfolio__technologies-title">Technologies used </h2>
+      <% @portfolio_item.technologies.each do |t| %>
+        <a class="" href="#"><%= t.name %></a>
+      <% end %>
+    </div>
 
-  <div class="portfolio-item-technologies">
-    <p>Technologies used </p>
-    <% @portfolio_item.technologies.each do |t| %>
-      <li><%= t.name %></li>
-    <% end %>
   </div>
 
-  </div>
 </div>

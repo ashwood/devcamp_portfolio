@@ -1,36 +1,34 @@
-  <header class="sidebar-content-container">
-    <div class="sidebar-content">
+<nav class="sidebar">
 
-      <p class="title">Devcamp Portfolio</p>
-      <p class="subtitle">Welcome to my portfolio.</p>
+  <h1 class="sidebar__brand">Devcamp Portfolio</h1>
+  <p class="sidebar__description">Welcome to my portfolio.</p>
 
-      <div class="nav-list-container">
-        <p class="nav-list-title">Skills</p>
-        <ul class="nav-list-items">
-          <li><a href="#">Angular</a></li>
-          <li><a href="#">Ruby on Rails</a></li>
-          <li><a class="active" href="#">React JS</a></li>
-          <li><a href="#">HTML & CSS</a></li>
-        </ul>
-      </div>
+  <div class="sidebar__nav">
+    <p class="sidebar__title">Skills</p>
+      <a class="sidebar__link" href="#">Angular</a>
+      <a class="sidebar__link" href="#">Ruby on Rails</a>
+      <a class="sidebar__link
+                sidebar__link--active" href="#">React JS</a>
+      <a class="sidebar__link" href="#">HTML & CSS</a>
+  </div>
 
-      <div class="nav-list-container">
-        <ul class="nav-list-items">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "About", about_me_path %></li>
-          <li><%= link_to "Contact", contact_path %></li>
-          <li><%= link_to "Blog", blogs_path %></li>
-          <li><%= link_to "Portfolio", portfolios_path %></li>
-        </ul>
-      </div>
+  <div class="sidebar__nav">
+    <%= link_to "Home", root_path,
+        class: 'sidebar__link' %>
+    <%= link_to "About", about_me_path,
+        class: 'sidebar__link' %>
+    <%= link_to "Contact", contact_path,
+        class: 'sidebar__link' %>
+    <%= link_to "Blog", blogs_path,
+        class: 'sidebar__link' %>
+    <%= link_to "Portfolio", portfolios_path,
+        class: 'sidebar__link
+                sidebar__linkv#{active_class(contact_path)}' %>
+  </div>
 
-      <div class="nav-list-container">
-        <ul class="nav-list-items">
-          <li><%= login_helper %></li>
-          <li><%= source_helper("application") %></li>
-        </ul>
-      </div>
+  <div class="sidebar__nav">
+      <%= login_helper %>
+      <%= source_helper("application") %>
+  </div>
 
-    </div>
-
-  </header>
+</nav>

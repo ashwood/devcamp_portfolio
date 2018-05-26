@@ -6,7 +6,79 @@ Layout is designed using flexbox. Overall structure is built using a simple flex
 - Use specific selectors over hard coded class names.
 - Colors and stylistic effects are applied as a theme, never to specific elements.
 
-### TOPDOWN COMPONENT STRUCTURE FOR APPLICATION
+
+
+### PAGE STRUCTURE FOR APPLICATION
+
+  html
+    body
+      .page-container
+        .navigation-container --> rendered as 'shared/application_nav'
+          a
+        .page-content-container
+          .page-content
+            render - home
+                   - about
+                   - contact
+                   - login / signup / edit user pages
+
+        .footer --> rendered as 'shared/application_footer'
+
+
+
+### PAGE STRUCTURE FOR PORTFOLIO
+
+html
+  body
+    .page-container
+
+      .sidebar-content-container ### rendered as 'portfolio-nav'
+        .sidebar-content
+          .title
+          .subtitle
+          .nav-list-container
+            .nav-list-title
+            .nav-list-items
+              a
+
+      .page-content-container
+        .page-content ### rendered through 'yield'
+
+######### Index page grid and contents
+          .portfolio-grid-index
+            .portfolio-grid-item
+              .thumb-image
+              .portfolio-item-title
+                a
+              .portfolio-item-subtitle
+              .portfolio-item-body
+              .portfolio-item-date
+              .last-of-type ### has link to create new portfolio
+                a
+
+######### Show page grid and contents
+          .portfolio-grid-show
+            .portfolio-grid-item
+              .main-image
+            .portfolio-grid-item
+              .thumb-image
+              .portfolio-item-header
+                .portfolio-item-title
+                .portfolio-item-subtitle
+                .portfolio-item-date
+              .portfolio-item-body
+              .portfolio-item-technologies
+                p
+                li
+
+        .footer
+          .copyright
+
+
+####### FOR BLOG
+
+
+Top down structure is as follows:
 
 html
   body
@@ -23,5 +95,6 @@ html
           .subtitle
       .footer-content-container
           .copyright
+
 
 */

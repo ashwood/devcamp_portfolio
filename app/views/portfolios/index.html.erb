@@ -1,13 +1,12 @@
-<div class="portfolio-grid-index">
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>
+<div class="portfolios-container">
 
-<% if logged_in?(:site_admin) %>
-<div class="portfolio-grid-item">
-  <div class="portfolio-item-new">
-    <%= link_to "Create portfolio", new_portfolio_path %>
-  </div>
+  <%= render partial: 'portfolio_item',
+  collection: @portfolio_items %>
+
+  <% if logged_in?(:site_admin) %>
+    <div class="portfolio-card__add-new">
+      <%= link_to "Create portfolio", new_portfolio_path, class: 'portfolio-card__button' %>
+    </div>
+  <% end %>
+
 </div>
-<% end %>
-</div>
-
-

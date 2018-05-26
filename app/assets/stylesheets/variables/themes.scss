@@ -1,15 +1,27 @@
 
 @mixin light-theme {
-
   color: $white-80;
-
   a {
     &:hover {
       color: $white-90;
     }
-    .active {
+    .--active {
       color: $white-90;
     }
     color: $white-80;
+  }
+}
+
+
+@mixin dark-theme {
+  color: $black-80;
+  a {
+    &:hover {
+      color: $black-90;
+    }
+    .--active {
+      color: $black-90;
+    }
+    color: $black-80;
   }
 }

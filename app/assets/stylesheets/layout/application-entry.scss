@@ -1,0 +1,30 @@
+.entry {
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+
+    &::after {
+      border-bottom: 1px solid $white-70;
+      content: " ";
+      display: block;
+      margin: 5rem auto 0 auto;
+      width: 100px;
+    }
+    + .button {
+      margin: 6rem 0 0 0;
+    }
+    }
+
+  &__subtitle {
+      margin: 4rem 0 0 0;
+      width: 410px;
+      + .button {
+        margin: 6rem 0 0 0;
+      }
+    }
+
+  &__logo {
+    margin: 0 0 4rem 0;
+  }
+}

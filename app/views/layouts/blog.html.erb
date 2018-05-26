@@ -11,17 +11,12 @@
     <%= favicon_link_tag 'favicon.png' %>
   </head>
 
-    <div class="page-container">
+    <div class="container">
 
       <%= render 'shared/blog_nav' %>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-
-      <div class="page-content-container">
-        <div class="page-content">
+      <div class="main">
          <%= yield %>
-        </div>
       </div>
 
       <%= render 'shared/blog_footer' %>

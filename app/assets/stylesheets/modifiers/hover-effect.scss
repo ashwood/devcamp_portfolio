@@ -1,6 +1,5 @@
-
 @mixin hover-underline {
-  a::after {
+  &:after {
     content: "";
     display: block;
     opacity: 0;
@@ -8,11 +7,12 @@
     transition: opacity 350ms ease-in;
   }
 
-  a:hover::after {
+  &:hover::after {
     opacity: 1;
   }
 
-  a.active::after {
+  &--active::after {
     opacity: 1;
   }
 }
+

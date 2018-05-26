@@ -1,0 +1,44 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 25;
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 6rem 0;
+
+    &--split{
+      justify-content: space-between;
+    }
+
+    &--tall {
+      padding: 6rem;
+    }
+  }
+
+  &__link {
+    @include secondary-font;
+    @include hover-underline;
+
+     &+ .header__link {
+      margin-left: 4.5rem;
+    }
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+
+  &__brand {
+    @include secondary-font;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    opacity: .7;
+    display: block;
+  }
+
+  &--colored {
+    background-color: #f0f2ef;
+  }
+
+}
+

@@ -1,50 +1,28 @@
 @import 'base/reset';
 @import 'variables/*';
-@import 'effects/*';
-@import 'components/*';
+@import 'modifiers/*';
 @import 'objects/*';
-@import 'layout/*';
+@import 'layout/fixed-header';
+@import 'layout/footer';
+@import 'layout/application-entry';
 
-/*
-
-  Page structure is as follows:
-
-  html
-    body
-      .page-container
-        .navigation-container --> rendered as 'shared/application_nav'
-          a
-        .page-content-container
-          .page-content
-            render - home
-                   - about
-                   - contact
-                   - login / signup / edit user pages
-
-        .footer --> rendered as 'shared/application_footer'
-*/
-
+/* See 'stylesheets/base/readme file for an overview of application layout components. */
 
 html {
 @include primary-font;
 @include light-theme;
 }
 
-.page-container {
-  @include horizontal-align-column;
+.container {
   text-align: center;
 }
 
-.navigation-container {
-  @include fixed-navigation;
-  @include inline-navigation;
-  @include hover-underline;
-  @include secondary-font;
-}
-
-.page-content-container {
-  @include center-align-column;
-  min-height: 100vh;
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   width: 100vw;
   background: linear-gradient($black-60, $black-70),
                 url(mountains.jpeg);
@@ -52,31 +30,3 @@ html {
   background-size: cover;
 }
 
-.page-content {
-
-  .logo {
-    height: 80px;
-    margin: 0 0 6rem 0;
-  }
-
-  h1 {
-    &::after {
-      border-bottom: 1px solid $white-70;
-      content: " ";
-      display: block;
-      margin: 5rem auto 0;
-      width: 100px;
-    }
-    + .button {
-      margin: 6rem 0 0 0;
-    }
-    }
-
-    p {
-      margin: 4rem 0 0;
-      width: 410px;
-      + .button {
-        margin: 6rem 0 0 0;
-      }
-    }
-}

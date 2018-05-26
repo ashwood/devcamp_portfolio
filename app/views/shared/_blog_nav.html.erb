@@ -1,29 +1,35 @@
-<header class="header-content-container">
-    <div class="nav-list-container">
-      <ul class="nav-list-items">
-        <%= link_to image_tag ('favicon.png'), class: 'navigation-logo' %>
-      </ul>
-      <ul class="nav-list-items">
-        <%= login_helper %>
-      </ul>
+<nav class="header header--colored">
+  <div class="header__nav header__nav--split">
+    <%= link_to image_tag ('logo-dark.png'),
+        class: 'logo--small' %>
+    <div class="header_login">
+      <%= login_helper %>
     </div>
+  </div>
 
-    <div class="nav-list-container">
-      <ul class="nav-list-items">
-        <a href="#" class="navigation-brand">Devcamp Portfolio Blog</a>
-      </ul>
-    </div>
+  <div class="header__nav">
+    <%= link_to "Devcamp Portfolio Blog", root_path,
+        class: "header__brand" %>
+  </div>
 
-    <div class="nav-list-container">
-      <ul class="nav-list-items">
-          <%= link_to "Home", root_path, :class => active_class(root_path) %>
-          <%= link_to "About", about_me_path, :class => active_class(about_me_path) %>
-          <%= link_to "Contact", contact_path, :class => active_class(contact_path) %>
-          <%= link_to "Blog", blogs_path, :class => active_class(blogs_path)  %>
-          <%= link_to "Portfolio", portfolios_path %>
-      </ul>
-    </div>
-</header>
+  <div class="header__nav">
+    <%= link_to "Home", root_path,
+        class: "header__link" %>
+
+    <%= link_to "About", about_me_path,
+        class: "header__link" %>
+
+    <%= link_to "Contact", contact_path,
+        class: "header__link" %>
+
+    <%= link_to "Blog", blogs_path,
+        class: "header__link
+                header__link#{active_class(contact_path)}" %>
+
+    <%= link_to "Portfolio", portfolios_path,
+        class: "header__link" %>
+  </div>
+</nav>
 
 
 
