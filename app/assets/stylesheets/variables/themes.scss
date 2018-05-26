@@ -1,0 +1,15 @@
+
+@mixin light-theme {
+
+  color: $white-80;
+
+  a {
+    &:hover {
+      color: $white-90;
+    }
+    .active {
+      color: $white-90;
+    }
+    color: $white-80;
+  }
+}

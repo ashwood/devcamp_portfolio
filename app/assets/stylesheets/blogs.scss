@@ -1,4 +1,6 @@
 
+
+
 @import url('https://fonts.googleapis.com/css?family=Halant|Tajawal:300,700');
 
 $brand-color: #6a95b8;
@@ -19,7 +21,6 @@ $black-80: rgba(0, 0, 0, 0.8);
 $black-90: rgba(0, 0, 0, 0.9);
 
 $white-10: rgba(255, 255, 255, 0.1);
-
 $white-20: rgba(255, 255, 255, 0.2);
 $white-30: rgba(255, 255, 255, 0.3);
 $white-40: rgba(255, 255, 255, 0.4);
@@ -72,31 +73,31 @@ body {
 }
 
 .page-container {
-  width: 100%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
 
   .header-content-container {
-    width: 100%;
-    position: fixed;
-    z-index: 25;
     background-color: #f0f2ef;
+    position: fixed;
+    width: 100%;
+    z-index: 25;
     }
 
     .nav-list-container {
-      padding: 2rem 6rem;
       display: flex;
       justify-content: center;
+      padding: 2rem 6rem;
 
       &:first-of-type{
-        padding: 5rem 6rem 3rem;
         justify-content: space-between;
+        padding: 5rem 6rem 3rem;
       }
 
       &:last-of-type {
-        padding: 4rem 6rem 2rem;
         justify-content: center;
+        padding: 4rem 6rem 2rem;
       }
 
       .navigation-logo {
@@ -111,11 +112,11 @@ body {
 
         a {
           color: $black-60;
-          font-family: 'Tajawal', sans-serif;
-          letter-spacing: .05rem;
-          font-size: 1.4rem;
-          margin: 0 2rem;
           display: inline-block;
+          font-family: 'Tajawal', sans-serif;
+          font-size: 1.4rem;
+          letter-spacing: .05rem;
+          margin: 0 2rem;
 
           &::after {
             background-color: $black-40;
@@ -124,8 +125,8 @@ body {
             height: 1px;
             position: relative;
             top: 5;
-            width: 0;
             transition: width linear 400ms;
+            width: 0;
           }
 
           &:hover {

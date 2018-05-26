@@ -1,3 +1,23 @@
+
+<div class="form-container">
+
+  <h2>Form Template Styles</h2>
+
+  <div class="form-field">
+    <label class="form-label" for="Name">Name</label>
+    <input class="form-input" type="text">
+  </div>
+
+  <div class="form-field">
+    <label class="form-label" for="Name">Password</label>
+    <input class="form-input" type="password">
+  </div>
+
+  <div class="form-field">
+  </div>
+</div>
+
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -37,7 +57,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update", class: 'form-submit' %>
   </div>
 <% end %>
 

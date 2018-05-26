@@ -1,0 +1,27 @@
+/*
+Read this file to understand the structure of the css for this application.
+
+Layout is designed using flexbox. Overall structure is built using a simple flexbox model. The body tag centeres the content using flex(column). The sidebar and the page content container are split into two columns by using flex(row) on page-container. The max width for page content is 1200 pixels. If the display width exceeds the max-width, the content will remain centered. The page content container uses flex(column) to seperate the page content from the footer.
+
+- Use specific selectors over hard coded class names.
+- Colors and stylistic effects are applied as a theme, never to specific elements.
+
+### TOPDOWN COMPONENT STRUCTURE FOR APPLICATION
+
+html
+  body
+    .page-container
+      .header-content-container
+        .nav-list-container
+          .nav-list-items
+            a
+      .page-content-container
+        .page-content
+          .logo
+          .title
+            ::after
+          .subtitle
+      .footer-content-container
+          .copyright
+
+*/

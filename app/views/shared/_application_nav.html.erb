@@ -1,13 +1,9 @@
-<header class="header-content-container">
-    <div class="nav-list-container">
-      <ul class="nav-list-items">
-          <%= link_to "Home", root_path, :class => active_class(root_path) %>
-          <%= link_to "About", about_me_path, :class => active_class(about_me_path) %>
-          <%= link_to "Contact", contact_path, :class => active_class(contact_path) %>
-          <%= link_to "Blog", blogs_path %>
-          <%= link_to "Portfolio", portfolios_path %>
-          <%= login_helper %>
-      </ul>
-    </div>
+<header class="navigation-container">
+  <%= link_to "Home", root_path, :class => active_class(root_path) %>
+  <%= link_to "About", about_me_path, :class => active_class(about_me_path) %>
+  <%= link_to "Contact", contact_path, :class => active_class(contact_path) %>
+  <%= link_to "Blog", blogs_path %>
+  <%= link_to "Portfolio", portfolios_path %>
+  <%= login_helper %>
 </header>
 

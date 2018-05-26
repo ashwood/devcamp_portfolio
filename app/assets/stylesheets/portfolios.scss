@@ -92,13 +92,13 @@ body {
 .page-container {
   display: flex;
   height: 100vh;
-  width: 100%;
   max-width: 120rem;
+  width: 100%;
 }
 
 .sidebar-content-container {
-  width: 220px;
   height: 100vh;
+  width: 220px;
 
   .sidebar-content {
     margin: 6rem 0 0 0;
@@ -109,8 +109,8 @@ body {
     }
 
     .subtitle {
-      margin: 2rem 0 0 0;
       font-size: 1.4rem;
+      margin: 2rem 0 0 0;
     }
 
     .nav-list-container {
@@ -124,10 +124,10 @@ body {
       }
 
       .nav-list-title {
-        font-size: 1.2rem;
         color: $black-50;
-        font-weight: bold;
         font-family: 'Tajawal', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
         letter-spacing: .2rem;
         text-transform: uppercase;
       }
@@ -139,19 +139,14 @@ body {
       .nav-list-items {
 
         a {
+          &.active { color: $brand-color; }
+          &:hover { color: $brand-color; }
           color: $black-60;
           display: inline-block;
           font-size: 1.4rem;
           line-height: 1.8rem;
           margin: 0 0 10px 0;
-          &.active {
-            color: $brand-color;
-          }
-          &:hover {
-            color: $brand-color;
-          }
         }
-
       }
     }
   }}

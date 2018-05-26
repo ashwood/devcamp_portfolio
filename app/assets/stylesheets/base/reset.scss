@@ -1,0 +1,33 @@
+*,
+*::before,
+::after {
+  border: 0;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  border-radius: 0;
+  border: 0;
+  outline: none;
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}

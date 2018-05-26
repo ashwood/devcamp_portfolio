@@ -1,0 +1,18 @@
+
+@mixin hover-underline {
+  a::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    border-bottom: 1px solid;
+    transition: opacity 350ms ease-in;
+  }
+
+  a:hover::after {
+    opacity: 1;
+  }
+
+  a.active::after {
+    opacity: 1;
+  }
+}
