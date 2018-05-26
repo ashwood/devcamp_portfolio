@@ -1,9 +1,9 @@
-<div class="blog-grid">
+<div class="blogs-container">
     <%= render @blogs %>
 
   <% if logged_in?(:site_admin) %>
-    <div class="blog-grid-item">
-      <%= link_to 'New Blog', new_blog_path %>
+    <div class="blog-card__add-new">
+      <%= link_to 'New Blog', new_blog_path, class: 'blog-card__button' %>
     </div>
   <% end %>
 

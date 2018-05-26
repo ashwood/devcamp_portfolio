@@ -1,13 +1,27 @@
-  <div class="blog-grid-item">
-    <p class="blog-item-title"><%= link_to blog.title, blog %></p>
-    <p class="blog-item-body"><%= blog.body.truncate_words(34, omission: '... (continued)')%></p>
-    <p class="blog-item-date">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago.</p>
+  <div class="blog-card">
+
+    <h2 class="blog-card__title">
+      <%= link_to blog.title, blog %></h2>
+
+    <p class="blog-card__body">
+      <%= blog.body.truncate_words(34, omission: '... (continued)')%></p>
+
+    <p class="blog-card__date">Published
+      <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago.</p>
 
     <% if logged_in?(:site_admin) %>
-      <div class="site-admin-links">
-      <%= link_to 'Edit post', edit_blog_path(blog) %>
-      <%= link_to 'Delete post', blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="blog-card__admin-links">
+
+        <%= link_to 'Edit post', edit_blog_path(blog),
+            class: "blog-card__link" %>
+
+        <%= link_to 'Delete post', blog,
+            method: :delete, data: { confirm: 'Are you sure?' },
+            class: 'blog-card__link' %>
+
+        <p>Status: <%= link_to blog.status,
+                       toggle_status_blog_path(blog) %></p>
       </div>
-      <p class="blog-item-status">Blog status: <%= link_to blog.status, toggle_status_blog_path(blog) %></p>
     <% end %>
+
   </div>

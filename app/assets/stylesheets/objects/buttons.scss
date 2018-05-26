@@ -13,3 +13,33 @@
     transition: all .2s ease-in-out;
   }
 }
+
+@mixin card-button {
+
+  &__add-new {
+    align-items: center;
+    border: 1px dashed;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__button {
+    @include secondary-font;
+    font-size: 2.5rem;
+    font-weight: 300;
+    &:before {
+      border-radius: 50%;
+      border: 1px solid;
+      content: "+";
+      display: block;
+      font-size: 5rem;
+      font-weight: 200;
+      height: 50px;
+      margin: 2rem auto;
+      text-align: center;
+      width: 50px;
+    }
+  }
+
+}
