@@ -1,7 +1,7 @@
 .blogs-container {
   display: grid;
   grid-gap: 3rem 3rem;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50rem 50rem;
   margin: 0 3rem 0 0;
 }
 
@@ -54,58 +54,3 @@
     color: white;
   }
 }
-
-
-
-
-.blog {
-  display: grid;
-  grid-gap: 1rem 1rem;
-  grid-template-columns: 1fr;
-  margin: 0 3rem 0 0;
-  background-color: white;
-
-  &__header {
-    font-weight: 200;
-    text-align: center;
-  }
-
-  &__title {
-    @incldue secondary-font;
-    font-size: 3rem;
-    line-height: 2.8rem;
-    margin: 10rem 0 0 0;
-    opacity: 0.8;
-  }
-
-  &__header::after {
-    border-bottom: 1px solid $black-20;
-    content: " ";
-    display: block;
-    margin: 3rem auto;
-    width: 400px;
-  }
-
-  &__body {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    margin: 3rem 0 0 0;
-  }
-
-  &__date {
-    font-size: 1.4rem;
-    margin: 3rem 0 0 0;
-  }
-
-  &__admin-links {
-    text-align: center;
-    margin: 2rem 0 8rem;
-  }
-
-  &__link {
-    margin: 1rem 1rem 0;
-    display: inline-block;
-    font-size: 1.2rem;
-  }
-}
-

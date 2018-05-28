@@ -1,51 +1,3 @@
-/* INDEX GRID STYLES */
-
-.portfolios-container {
-  margin: 4rem 0 0 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3rem 1rem;
-}
-
-.portfolio-card {
-
-    &__thumb-image {
-    width: 32rem;
-    height: 26rem;
-    }
-
-    &__title {
-    margin: 1.2rem 0 0 0;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    }
-
-    &__subtitle {
-    margin: 1rem 0 0 0;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    }
-
-    &__body {
-    margin: 1rem 0 0 0;
-    }
-
-    &__date {
-    margin: 1.2rem 0 0 0;
-    font-size: 1.2rem;
-    opacity: .7;
-    }
-
-    @include card-button;
-
-    &__add-new {
-      opacity: 0.4;
-      width: 32rem;
-      height: 26rem;
-    }
-}
-
-/* SHOW PAGE GRID STYLES */
 
 .portfolio {
   margin: 4rem 0 3rem 0;
@@ -118,7 +70,3 @@
     }
   }
 }
-
-
-
-
