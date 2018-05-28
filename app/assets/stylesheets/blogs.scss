@@ -5,6 +5,7 @@
 @import 'layout/blog-grid';
 @import 'layout/fixed-header';
 @import 'layout/footer';
+@import 'layout/sidebar';
 
 html {
   @include primary-font;
@@ -26,11 +27,22 @@ body {
 .main {
   min-height: 100vh;
   width: 100vw;
-  padding-top: 350px;
+  padding-top: 300px;
 
   background: linear-gradient($white-10, $white-20),
                 url(mountains.jpeg);
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
 }
+
+.blog-grid {
+  flex-basis: 70%;
+}
+
+.sidebar {
+  flex-basis: 30%;
+}
+
+

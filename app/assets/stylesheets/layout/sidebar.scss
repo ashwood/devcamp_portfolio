@@ -1,6 +1,15 @@
 .sidebar {
   height: 100vh;
-  width: 220px;
+  min-width: 220px;
+  background-color: white;
+
+  &--fixed {
+    position: fixed;
+  }
+
+  &--block {
+
+  }
 
   &__brand {
     padding: 6rem 0 0 0;
