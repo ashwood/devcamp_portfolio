@@ -1,7 +1,5 @@
 .blog {
-  display: grid;
-  grid-gap: 1rem 1rem;
-  grid-template-columns: 1fr;
+  flex-basis: 80%;
   margin: 0 3rem 0 0;
   background-color: white;
 
