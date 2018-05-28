@@ -20,7 +20,9 @@
     width: 100%;
   }
 
-  &--inline {
+  &--short {
+    margin: 0 auto;
+    width: 200px;
   }
 }
 
