@@ -27,7 +27,7 @@ body {
 .main {
   min-height: 100vh;
   width: 100vw;
-  padding-top: 300px;
+  padding: 24rem 3rem 3rem;
 
   background: linear-gradient($white-10, $white-20),
                 url(mountains.jpeg);
@@ -37,12 +37,7 @@ body {
   display: flex;
 }
 
-.blog-grid {
-  flex-basis: 70%;
-}
-
 .sidebar {
-  flex-basis: 30%;
+  flex-basis: 50%;
 }
-
 

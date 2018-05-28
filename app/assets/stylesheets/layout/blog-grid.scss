@@ -1,8 +1,8 @@
 .blogs-container {
   display: grid;
   grid-gap: 3rem 3rem;
-  grid-template-columns: 1fr 1fr;
-  margin: 0 3rem;
+  grid-template-columns: auto auto;
+  margin: 0 3rem 0 0;
 }
 
 .blog-card {
@@ -62,8 +62,7 @@
   display: grid;
   grid-gap: 1rem 1rem;
   grid-template-columns: 1fr;
-  margin: 4rem;
-  padding: 0 3rem;
+  margin: 0 3rem 0 0;
   background-color: white;
 
   &__header {

@@ -1,21 +1,30 @@
 .sidebar {
-  height: 100vh;
-  min-width: 220px;
+  min-width: 22rem;
   background-color: white;
+  padding: 6rem 4rem 0;
 
   &--fixed {
     position: fixed;
+    height: 100vh;
   }
 
-  &--block {
-
+  &--sticky {
+    position: sticky;
+    top: 23.5rem;
+    height: 800px;
   }
 
   &__brand {
-    padding: 6rem 0 0 0;
+    @include center-align;
+  }
+
+  &__brand-image {
+    margin: 0 auto 1rem;
+    display: block;
   }
 
   &__description {
+    @include center-align;
     margin: 2rem 0 0 0;
   }
 
@@ -47,7 +56,7 @@
     color: $black-60;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    margin: 0 0 10px 0;
+    margin: 0 0 1rem 0;
 
     &--active {
       color: $brand-color;

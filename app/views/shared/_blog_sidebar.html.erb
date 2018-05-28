@@ -1,10 +1,12 @@
-<nav class="sidebar">
+<nav class="sidebar sidebar--sticky">
 
-  <h1 class="sidebar__brand">Devcamp Blog</h1>
-  <p class="sidebar__description">Welcome to my blog.</p>
+    <%= image_tag ('logo-dark.png'), class: 'sidebar__brand-image
+                                             logo--small ' %>
+    <h1 class="sidebar__brand sidebar__brand--center">About</h1>
+    <p class="sidebar__description sidebar__description--center ">“Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”</p>
 
   <div class="sidebar__nav">
-    <p class="sidebar__title">Skills</p>
+    <p class="sidebar__title">Topics</p>
       <a class="sidebar__link" href="#">Angular</a>
       <a class="sidebar__link" href="#">Ruby on Rails</a>
       <a class="sidebar__link
@@ -12,18 +14,18 @@
       <a class="sidebar__link" href="#">HTML & CSS</a>
   </div>
 
+
   <div class="sidebar__nav">
-    <%= link_to "Home", root_path,
-        class: 'sidebar__link' %>
-    <%= link_to "About", about_me_path,
-        class: 'sidebar__link' %>
-    <%= link_to "Contact", contact_path,
-        class: 'sidebar__link' %>
-    <%= link_to "Blog", blogs_path,
-        class: 'sidebar__link' %>
-    <%= link_to "Portfolio", portfolios_path,
-        class: 'sidebar__link
-                sidebar__linkv#{active_class(contact_path)}' %>
+    <p class="sidebar__title">Archives</p>
+      <a class="sidebar__link" href="#">May 2018</a>
+      <a class="sidebar__link" href="#">April 2018</a>
+      <a class="sidebar__link
+                sidebar__link--active" href="#">March 2018</a>
+      <a class="sidebar__link" href="#">February 2018</a>
+      <a class="sidebar__link" href="#">January 2018</a>
+      <a class="sidebar__link
+                sidebar__link--active" href="#">December 2017</a>
+      <a class="sidebar__link" href="#">November 2016</a>
   </div>
 
   <div class="sidebar__nav">
