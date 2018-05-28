@@ -26,12 +26,8 @@
   &__date {
     font-size: 1.4rem;
     margin: 1.2rem 0 0 0;
-  }
-
-  &__status {
-    a { color: $brand-color; }
-    font-size: 1.2rem;
-    margin: .3rem 0 0 0;
+    font-style: italic;
+    opacity: 0.8;
   }
 
   &__admin-links {
@@ -40,10 +36,12 @@
 
   &__link {
     &:hover { color: $brand-color; }
-    color: $black-70;
-    display: block;
     font-size: 1.2rem;
-    margin: .3rem 0 0 0;
+    margin: .3rem .5rem 0 0;
+  }
+
+  &__link + &__link {
+    margin-left: .5rem;
   }
 
   @include card-button;

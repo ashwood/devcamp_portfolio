@@ -1,6 +1,14 @@
-<h1>Editing Blog</h1>
+<div class="form">
+  <div class="form__card">
 
-<%= render 'form', blog: @blog %>
+    <h1 class="form__title">Editing Blog</h1>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+    <%= render 'form', blog: @blog %>
+
+    <div class="form__link-group">
+      <%= link_to 'Show', @blog, class: 'form__link' %>
+      <%= link_to 'Back', blogs_path, class: 'form__link' %>
+    </div>
+
+  </div>
+</div>
