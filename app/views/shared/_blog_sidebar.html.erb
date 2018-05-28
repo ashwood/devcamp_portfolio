@@ -16,16 +16,27 @@
   </div>
 
   <div class="sidebar__nav">
-    <p class="sidebar__title">Archives</p>
-      <a class="sidebar__link" href="#">May 2018</a>
-      <a class="sidebar__link" href="#">April 2018</a>
-      <a class="sidebar__link
-                sidebar__link--active" href="#">March 2018</a>
-      <a class="sidebar__link" href="#">February 2018</a>
-      <a class="sidebar__link" href="#">January 2018</a>
-      <a class="sidebar__link
-                sidebar__link--active" href="#">December 2017</a>
-      <a class="sidebar__link" href="#">November 2016</a>
+    <p class="sidebar__title">Elsewhere</p>
+    <div class="sidebar__icon-group">
+      <%= link_to (fa_icon "github"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "twitter"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "facebook"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "medium"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "spotify"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "soundcloud"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "qq"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "slideshare"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "instagram"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+    </div>
   </div>
 
   <div class="sidebar__nav">

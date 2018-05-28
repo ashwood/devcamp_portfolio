@@ -66,4 +66,16 @@
       color: $brand-color;
     }
   }
+
+    &__icon-group {
+      width: 12rem;
+      display: grid;
+      grid-template-columns: repeat(3, 3.5rem);
+      grid-template-rows: repeat(3, 3rem);
+  }
+
+  &__icon {
+    opacity: 0.6;
+    font-size: 1.6rem;
+  }
 }

@@ -24,10 +24,34 @@
     <%= link_to "Portfolio", portfolios_path,
         class: 'sidebar__link
                 sidebar__linkv#{active_class(contact_path)}' %>
+    <%= login_helper 'sidebar__link' %>
   </div>
 
   <div class="sidebar__nav">
-      <%= login_helper 'sidebar__link' %>
+    <p class="sidebar__title">Elsewhere</p>
+    <div class="sidebar__icon-group">
+      <%= link_to (fa_icon "github"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "twitter"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "facebook"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "medium"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "spotify"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "soundcloud"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "qq"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "slideshare"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+      <%= link_to (fa_icon "instagram"), "#",
+          class: 'sidebar__icon sidebar__link' %>
+    </div>
+  </div>
+
+  <div class="sidebar__nav">
       <%= source_helper("portfolio") %>
   </div>
 
