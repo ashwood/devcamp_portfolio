@@ -1,14 +1,12 @@
 <div class="form form--full-width">
   <div class="form__section">
-
     <h1 class="form__title">Editing Blog</h1>
 
     <%= render 'form', blog: @blog %>
 
     <div class="form__link-group">
-      <%= link_to 'Show', @blog, class: 'form__link' %>
+      <%= link_to 'View post', @blog, class: 'form__link' %>
       <%= link_to 'Back', blogs_path, class: 'form__link' %>
     </div>
-
   </div>
 </div>

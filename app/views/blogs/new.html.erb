@@ -1,5 +1,12 @@
-<h1>New Blog</h1>
+<div class="form form--full-width">
+  <div class="form__section">
+    <h1 class="form__title">New post</h1>
 
-<%= render 'form', blog: @blog %>
+    <%= render 'form', blog: @blog %>
 
-<%= link_to 'Back', blogs_path %>
+    <div class="form__link-group">
+      <%= link_to 'Back', blogs_path, class: 'form__link' %>
+    </div>
+  </div>
+</div>
+
