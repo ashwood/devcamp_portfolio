@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
     :toggle_status]
   layout "blog"
   access all: [:show, :index],
-         user: {except: [:destroy, :new, :create, :edit, :update]},
+         user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]},
          site_admin: :all
 
   # GET /blogs
