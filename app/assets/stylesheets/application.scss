@@ -1,13 +1,8 @@
-@import 'base/reset';
-@import 'variables/*';
-@import 'modifiers/*';
-@import 'objects/*';
+@import 'base/*';
+@import 'abstracts/*';
 @import 'components/*';
-@import 'layout/fixed-header';
-@import 'layout/footer';
-@import 'layout/application-entry';
-
-/* See 'stylesheets/base/readme file for an overview of application layout components. */
+@import 'layout/*';
+@import 'pages/application-pages';
 
 html {
 @include primary-font;

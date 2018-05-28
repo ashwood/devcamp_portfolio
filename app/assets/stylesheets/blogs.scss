@@ -1,11 +1,9 @@
-@import 'base/reset';
-@import 'variables/*';
-@import 'modifiers/*';
-@import 'objects/*';
-@import 'layout/blog-grid';
-@import 'layout/fixed-header';
-@import 'layout/footer';
-@import 'layout/sidebar';
+@import 'base/*';
+@import 'abstracts/*';
+@import 'components/*';
+@import 'layout/*';
+@import 'pages/blogs-index';
+@import 'pages/blog-show';
 
 html {
   @include primary-font;

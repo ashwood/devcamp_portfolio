@@ -1,12 +1,9 @@
-@import 'base/reset';
-@import 'variables/*';
-@import 'modifiers/*';
-@import 'objects/*';
-@import 'layout/sidebar';
-@import 'layout/footer';
-@import 'layout/portfolios-grid';
-
-/* See 'stylesheets/base/readme' file for an overview of portfolio layout components. */
+@import 'base/*';
+@import 'abstracts/*';
+@import 'components/*';
+@import 'layout/*';
+@import 'pages/portfolios-index';
+@import 'pages/portfolio-show';
 
 html {
 @include primary-font;
@@ -14,7 +11,7 @@ html {
 }
 
 body {
-  @include flex-column
+  @include flex-column;
   align-items: center;
   width: 100%;
 }
@@ -27,7 +24,7 @@ body {
 }
 
 .main {
-  @include flex-column
+  @include flex-column;
   width: 980px;
   margin: 0 0 3rem 26rem;
 }
