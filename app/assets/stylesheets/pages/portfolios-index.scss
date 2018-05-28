@@ -1,5 +1,5 @@
 .portfolios-container {
-  margin: 4rem 0 0 0;
+  margin: 4rem 0 3rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem 1rem;
@@ -29,7 +29,7 @@
     }
 
     &__date {
-    margin: 1.2rem 0 0 0;
+    margin: 1rem 0 .8rem 0;
     font-size: 1.2rem;
     opacity: .7;
     }
@@ -40,5 +40,14 @@
       opacity: 0.4;
       width: 32rem;
       height: 26rem;
+    }
+
+    &__link {
+      margin-right: 1rem;
+      opacity: 0.8;
+    }
+
+    &__link + &__link {
+      margin-left: 1rem;
     }
 }

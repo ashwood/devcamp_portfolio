@@ -13,22 +13,19 @@ html {
 
 body {
   @include flex-column;
-  align-items: center;
-  width: 100%;
+  align-items: center
 }
 
 .container {
-  display: flex;
-  height: 100vh;
-  max-width: 120rem;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 22rem 98rem;
 }
 
 .main {
-  @include flex-column;
-  width: 980px;
-  margin: 0 0 3rem 26rem;
+  margin-left: 22rem;
 }
 
-
+.footer {
+  width: 98rem;
+}
 

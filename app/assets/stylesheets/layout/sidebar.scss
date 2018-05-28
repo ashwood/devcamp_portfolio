@@ -1,17 +1,16 @@
 .sidebar {
-  min-width: 22rem;
   background-color: white;
-  padding: 6rem 4rem 0;
+  padding: 4rem 0 0;
 
   &--fixed {
     position: fixed;
-    height: 100vh;
   }
 
   &--sticky {
     position: sticky;
     top: 23.5rem;
     max-width: 28rem;
+    padding: 4rem 4rem 0;
   }
 
   &__brand {
