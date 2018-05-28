@@ -35,11 +35,13 @@
   &__date {
     font-size: 1.4rem;
     margin: 3rem 0 0 0;
+    opacity: 0.8;
+    font-style: italic;
   }
 
   &__admin-links {
     text-align: center;
-    margin: 2rem 0 8rem;
+    margin: 1rem 0 0rem;
   }
 
   &__link {

@@ -19,8 +19,8 @@
             method: :delete, data: { confirm: 'Are you sure?' },
             class: 'blog-card__link' %>
 
-        <p>Status: <%= link_to blog.status,
-                       toggle_status_blog_path(blog) %></p>
+        <%= link_to blog.status,
+                       toggle_status_blog_path(blog) %>
       </div>
     <% end %>
 
