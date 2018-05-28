@@ -1,25 +1,21 @@
 <div class="form">
-
   <div class="form__card">
+    <h2 class="form__title">Resend unlock instructions</h2>
 
-  <h2 class="form__title">Resend unlock instructions</h2>
+    <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+      <%= devise_error_messages! %>
 
-  <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-    <%= devise_error_messages! %>
+      <div class="form__group">
+        <%= f.label :email, class: "form__label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",
+            class: "form__input"  %>
+      </div>
 
-    <div class="form__group">
-      <%= f.label :email,
-          class: "form__label" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email",
-          class: "form__input"  %>
-    </div>
-
-    <div class="form__group">
-      <%= f.submit "Resend unlock instructions",
-          class: "button
-                  form__button" %>
-    </div>
-  <% end %>
+      <div class="form__group">
+        <%= f.submit "Resend unlock instructions",
+            class: "button form__button" %>
+      </div>
+    <% end %>
 
   <div class="form__link-group">
     <%= render "devise/shared/links" %>
