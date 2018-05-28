@@ -2,7 +2,7 @@
   <div class="header__nav header__nav--split">
     <%= link_to image_tag ('logo-dark.png'),
         class: 'logo--small' %>
-    <div class="header_login">
+    <div class="header__login">
       <%= login_helper %>
     </div>
   </div>
@@ -24,7 +24,7 @@
 
     <%= link_to "Blog", blogs_path,
         class: "header__link
-                header__link#{active_class(contact_path)}" %>
+                header__link#{active_class(blogs_path)}" %>
 
     <%= link_to "Portfolio", portfolios_path,
         class: "header__link" %>

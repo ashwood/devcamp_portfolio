@@ -6,9 +6,8 @@
   line-height: 1.4rem;
   margin: 0 auto;
   background-color: transparent;
-
-
-  &--hover {
+  &:hover {
+    box-shadow: 1px 1px 1px $black-20;
     opacity: .7;
     &:hover {
       opacity: 1;
@@ -18,6 +17,7 @@
 
   &--fullwidth {
     display: block;
+    width: 100%;
   }
 
   &--inline {

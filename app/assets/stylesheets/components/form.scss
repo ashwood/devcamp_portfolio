@@ -1,38 +1,51 @@
 .form {
   @include secondary-font;
-  background-color: white;
-  padding: 3rem 6rem 2rem;
-  min-width: 42rem;
-  border-radius: 3px;
-  color: $black-90;
+  @include dark-theme;
+  background-color: $white-90;
   text-align: left;
-  font-size: 120%;
+  font-size: 1.4rem;
+  padding: 5rem 6rem 4rem;
+  box-shadow: 0px 5px 10px $black-50;
 
+  &__card {
+    width: 33rem;
+    border-radius: 3px;
+  }
 
   &__title {
     text-align: center;
-    margin: 0 0 2rem 0;
+    font-size: 2.6rem;
+    line-height: 3rem;
+    margin: 0 0 3rem 0;
   }
 
-  &__field {
-
+  &__group-title {
+    text-align: left;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 0 0 1rem 0;
   }
 
-  &__field + .form__field {
-    margin: 4rem 0 0 0;
+  &__group + &__group {
+    margin: 3rem 0 0 0;
   }
 
   &__label {
-    display: block;
     font-weight: bold;
     opacity: 0.7;
+  }
+
+  &__caption {
+    font-style: italic;
   }
 
   &__input {
     display: block;
     width: 100%;
+    max-width: 400px;
     margin: .8rem 0 0 0;
-    padding: 0 0 .4rem 0;
+    padding: .5rem .5rem;
+    line-height: 1.5em;
     border-bottom: 1px solid $black-40;
     background-color: transparent;
 
@@ -42,9 +55,18 @@
       outline: none;
       border-color: $black-70;
     }
+
+    &:focus:invalid {
+      border-bottom-color: red;
+    }
   }
 
-  &__checkbox {
+  &__radio-group {
+    display: inline-block;
+    margin: 3rem 0 0 0;
+  }
+
+  &__radio-input {
     visibility: hidden;
     opacity: .7;
 
@@ -70,17 +92,32 @@
 
   }
 
-  &__remember-me {
+  &__radio-label {
     margin: 0 0 0 .4rem;
   }
 
-  &__button {
-    margin: 3rem auto;
+  &__submit-button {
+    margin: 3rem auto 4rem;
+  }
+
+  &__link-group {
+    width: 100%;
+    text-align: center;
   }
 
   &__link {
-    line-height: 1.8rem;
+    line-height: 1.9rem;
     color: inherit;
+    magin: 0 0 .5rem 0;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__link + &__link {
+      margin: 0 0 0 3rem;
   }
 
 }
