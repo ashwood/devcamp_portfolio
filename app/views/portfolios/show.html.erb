@@ -30,10 +30,10 @@
 
     <p class="portfolio__body"><%= @portfolio_item.body %></p>
 
-    <div class="portfolio__technologies">
-      <h1 class="portfolio__technologies-title">Technologies used </h2>
+    <div class="portfolio__tech">
+      <h1 class="portfolio__tech-title">Technologies used </h2>
       <% @portfolio_item.technologies.each do |t| %>
-        <a class="" href="#"><%= t.name %></a>
+        <a class="portfolio__tech-name" href="#"><%= t.name %></a>
       <% end %>
     </div>
 

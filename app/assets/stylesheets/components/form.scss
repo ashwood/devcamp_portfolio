@@ -39,6 +39,12 @@
   &__label {
     font-weight: bold;
     opacity: 0.7;
+    display: block;
+  }
+
+  &__input + &__label {
+    padding-top: 2rem;
+    margin-bottom: -2px;
   }
 
   &__caption {
@@ -63,6 +69,12 @@
 
     &:focus:invalid {
       border-bottom-color: red;
+    }
+
+    &--short {
+      width: 28rem;
+      padding: 0 .5rem;
+      margin: .8rem 0 0 0;
     }
   }
 

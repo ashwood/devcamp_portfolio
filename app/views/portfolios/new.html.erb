@@ -1,3 +1,9 @@
-<h1>Create a new Portfolio Item.</h1>
-
-<%= render 'form', portfolio_item: @portfolio_item %>
+<div class="form form--full-width">
+  <div class="form__section">
+    <h1 class="form__title">Create new portfolio</h1>
+    <%= render 'form', portfolio_item: @portfolio_item %>
+    <div class="form__link-group">
+      <%= link_to 'Back', portfolios_path, class: 'form__link' %>
+    </div>
+  </div>
+</div>
