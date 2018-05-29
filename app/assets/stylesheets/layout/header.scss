@@ -2,6 +2,7 @@
   position: fixed;
   width: 100%;
   z-index: 25;
+  font-size: 1.4rem;
 
   &__nav {
     display: flex;
@@ -17,15 +18,26 @@
     }
   }
 
-  &__link {
+  &__list {
     @include secondary-font;
-    @include hover-underline;
+    list-style: none;
+    text-align: center;
+  }
 
-     &+ .header__link {
-      margin-left: 4.5rem;
-    }
+  &__item,
+  &__link {
     display: inline-block;
-    font-size: 1.4rem;
+    @include hover_underline;
+  }
+
+  &__item + &__item,
+  &__item + &__link,
+  &__link + &__link {
+    margin-left: 4.5rem;
+  }
+
+  &__link {
+    display: inline-block;
   }
 
   &__brand {
@@ -38,6 +50,5 @@
   &--colored {
     background-color: #f0f2ef;
   }
-
 }
 

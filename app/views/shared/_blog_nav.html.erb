@@ -2,9 +2,10 @@
   <div class="header__nav header__nav--split">
     <%= link_to image_tag ('logo-dark.png'),
         class: 'logo--small' %>
-    <div class="header__login">
+
+    <ul class="header__list">
       <%= login_helper 'header__link' %>
-    </div>
+    </ul>
   </div>
 
   <div class="header__nav">
@@ -13,21 +14,9 @@
   </div>
 
   <div class="header__nav header__nav--tall">
-    <%= link_to "Home", root_path,
-        class: "header__link" %>
-
-    <%= link_to "About", about_me_path,
-        class: "header__link" %>
-
-    <%= link_to "Contact", contact_path,
-        class: "header__link" %>
-
-    <%= link_to "Blog", blogs_path,
-        class: "header__link
-                header__link#{active_class(blogs_path)}" %>
-
-    <%= link_to "Portfolio", portfolios_path,
-        class: "header__link" %>
+    <ul class="header__list">
+        <%= nav_helper 'header__link', 'li', 'header__item' %>
+    </ul>
   </div>
 </nav>
 

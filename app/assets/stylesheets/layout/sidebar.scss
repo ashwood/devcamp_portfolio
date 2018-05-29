@@ -49,13 +49,18 @@
     margin: 0 0 2rem 0;
   }
 
+  &__list {
+    list-style: none;
+    font-size: 1.4rem;
+  }
+
+  &__item {
+    display: block;
+    margin: 0 0 1rem 0;
+  }
 
   &__link {
-    display: block;
     color: $black-60;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    margin: 0 0 1rem 0;
 
     &--active {
       color: $brand-color;

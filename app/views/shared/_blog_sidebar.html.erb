@@ -6,13 +6,22 @@
     <p class="sidebar__description sidebar__description--center ">“Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”</p>
 
   <div class="sidebar__nav">
+    <ul class="sidebar__list">
+      <%= login_helper 'sidebar__link' %>
+      <%= source_helper("portfolio") %>
+    </ul>
+  </div>
+
+  <div class="sidebar__nav">
     <p class="sidebar__title">View by topic</p>
-      <a class="sidebar__link" href="#">Angular</a>
-      <a class="sidebar__link" href="#">Ruby on Rails</a>
-      <a class="sidebar__link
-                sidebar__link--active" href="#">React JS</a>
-      <a class="sidebar__link" href="#">HTML & CSS</a>
-      <%= link_to 'View all topics', blogs_path, class: "sidebar__link" %>
+    <ul class="sidebar__list">
+      <li><a class="sidebar__link" href="#">Angular</a></li>
+      <li><a class="sidebar__link" href="#">Ruby on Rails</a></li>
+      <li><a class="sidebar__link
+                sidebar__link--active" href="#">React JS</a></li>
+      <li><a class="sidebar__link" href="#">HTML & CSS</a></li>
+      <li><%= link_to 'View all topics', blogs_path, class: "sidebar__link" %></li>
+    </ul>
   </div>
 
   <div class="sidebar__nav">

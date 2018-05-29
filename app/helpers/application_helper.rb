@@ -16,11 +16,49 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    AshwoodViewTool::Renderer.copyright 'Rosalynn Ashwood',
-                                        'All rights reserved'
+    AshwoodViewTool::Renderer.copyright 'Rosalynn Ashwood', 'All rights reserved'
   end
 
-  def active_class(link_path)
-    current_page?(link_path) ? "--active" : ""
+  def active? path
+    "--active" if current_page? path
+  end
+
+  def nav_items
+    [
+      {
+        url: root_path,
+        title: "Home"
+      },
+      {
+        url: about_me_path,
+        title: "About"
+      },
+      {
+        url: contact_path,
+        title: "Contact"
+      },
+      {
+        url: blogs_path,
+        title: "Blog"
+      },
+      {
+        url: portfolios_path,
+        title: "Portfolio"
+      }
+    ]
+  end
+
+  def nav_helper link_style, tag_type, tag_style
+    nav_links = ""
+
+    nav_items.each do |item|
+      nav_links << "<#{tag_type} class='#{tag_style}'>
+                    <a href='#{item[:url]}'class='#{link_style}
+                                          #{link_style}#{active? item[:url]}'>
+                    #{item[:title]}</a>
+                    </#{tag_type}>"
+    end
+
+    nav_links.html_safe
   end
 end

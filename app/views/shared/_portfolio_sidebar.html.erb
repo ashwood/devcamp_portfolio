@@ -5,26 +5,20 @@
 
   <div class="sidebar__nav">
     <p class="sidebar__title">Skills</p>
-      <a class="sidebar__link" href="#">Angular</a>
-      <a class="sidebar__link" href="#">Ruby on Rails</a>
-      <a class="sidebar__link
-                sidebar__link--active" href="#">React JS</a>
-      <a class="sidebar__link" href="#">HTML & CSS</a>
+      <ul class="sidebar__list">
+        <li><a class="sidebar__link" href="#">Angular</a></li>
+        <li><a class="sidebar__link" href="#">Ruby on Rails</a></li>
+        <li><a class="sidebar__link
+                  sidebar__link--active" href="#">React JS</a></li>
+        <li><a class="sidebar__link" href="#">HTML & CSS</a></li>
+      </ul>
   </div>
 
   <div class="sidebar__nav">
-    <%= link_to "Home", root_path,
-        class: 'sidebar__link' %>
-    <%= link_to "About", about_me_path,
-        class: 'sidebar__link' %>
-    <%= link_to "Contact", contact_path,
-        class: 'sidebar__link' %>
-    <%= link_to "Blog", blogs_path,
-        class: 'sidebar__link' %>
-    <%= link_to "Portfolio", portfolios_path,
-        class: 'sidebar__link
-                sidebar__linkv#{active_class(contact_path)}' %>
-    <%= login_helper 'sidebar__link' %>
+    <ul class="sidebar__list">
+      <%= nav_helper 'sidebar__link', 'li', 'sidebar__item' %>
+      <%= login_helper 'sidebar__link' %>
+    </ul>
   </div>
 
   <div class="sidebar__nav">
