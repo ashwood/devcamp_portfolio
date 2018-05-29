@@ -1,11 +1,11 @@
-<div class="portfolios-container">
+<div class="portfolios-container sortable">
 
-  <%= render partial: 'portfolio_item',
-  collection: @portfolio_items %>
+  <%= render partial: 'portfolio_item', collection: @portfolio_items %>
 
   <% if logged_in?(:site_admin) %>
     <div class="portfolio-card__add-new">
-      <%= link_to "Create portfolio", new_portfolio_path, class: 'portfolio-card__button' %>
+      <%= link_to "Create portfolio", new_portfolio_path,
+          class: 'portfolio-card__button' %>
     </div>
   <% end %>
 
