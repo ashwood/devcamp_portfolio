@@ -60,7 +60,9 @@
   }
 
   &__link {
+    display: block;
     color: $black-60;
+    margin: 0 0 1rem 0;
 
     &--active {
       color: $brand-color;
