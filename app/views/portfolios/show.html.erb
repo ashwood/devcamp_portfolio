@@ -1,7 +1,11 @@
 <div class="portfolio">
 
   <div class="portfolio-column-1">
-    <%= image_tag ('mountains.jpeg'), class: 'portfolio__main-image' %>
+
+    <div class="portfolio__main-image--crop">
+      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'),
+          class: "portfolio__main-image" %>
+    </div>
 
   <div class="portfolio__link-group">
     <% if logged_in?(:site_admin) %>
@@ -20,7 +24,9 @@
 
   <div class="portfolio_column-1">
 
-    <%= image_tag ('mist.jpeg'), class: 'portfolio__thumb-image' %>
+    <div class="portfolio__thumb-image--crop">
+      <%= image_tag portfolio_img(@portfolio_item.thumb_image, 'thumb'), class: "portfolio__thumb-image" %>
+    </div>
 
     <div class="portfolio__header">
       <h1 class="portfolio__title"><%= @portfolio_item.title %></h1>

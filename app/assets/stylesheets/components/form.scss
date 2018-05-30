@@ -25,6 +25,14 @@
     margin: 0 0 3rem 0;
   }
 
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    margin: 7rem 0 5rem;
+  }
+
   &__group-title {
     text-align: left;
     font-size: 2rem;
@@ -74,8 +82,12 @@
     &--short {
       width: 28rem;
       padding: 0 .5rem;
-      margin: .8rem 0 0 0;
+      margin: 3rem 0 0 0;
     }
+  }
+
+  &__file-select {
+    margin-top: 1rem;
   }
 
   &__radio-group {
@@ -135,6 +147,11 @@
 
   &__link + &__link {
       margin: 0 0 0 3rem;
+  }
+
+  &__file-button {
+    margin-top: 4rem;
+    opacity: 0.8;
   }
 
 }
