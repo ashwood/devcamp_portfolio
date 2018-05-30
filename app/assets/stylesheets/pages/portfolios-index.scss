@@ -8,8 +8,15 @@
 .portfolio-card {
 
     &__thumb-image {
-    width: 32rem;
-    height: 26rem;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &--crop {
+        width: 32rem;
+        height: 26rem;
+        overflow: hidden;
+      }
     }
 
     &__title {
