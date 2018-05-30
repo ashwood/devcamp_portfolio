@@ -3,7 +3,8 @@
   <div class="portfolio-column-1">
 
     <div class="portfolio__main-image--crop">
-      <%= image_tag @portfolio_item.main_image, class: 'portfolio__main-image' %>
+      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'),
+          class: "portfolio__main-image" %>
     </div>
 
   <div class="portfolio__link-group">
@@ -24,7 +25,7 @@
   <div class="portfolio_column-1">
 
     <div class="portfolio__thumb-image--crop">
-      <%= image_tag @portfolio_item.thumb_image, class: 'portfolio__thumb-image'  %>
+      <%= image_tag portfolio_img(@portfolio_item.thumb_image, 'thumb'), class: "portfolio__thumb-image" %>
     </div>
 
     <div class="portfolio__header">

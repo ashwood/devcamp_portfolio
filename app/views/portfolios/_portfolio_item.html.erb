@@ -1,9 +1,8 @@
 <div class="portfolio-card" data-id="<%= portfolio_item.id %>">
 
   <div class="portfolio-card__thumb-image--crop">
-    <%= image_tag ("#{portfolio_item.thumb_image unless
-                    portfolio_item.thumb_image.nil?}"),
-                    class: "portfolio-card__thumb-image" %>
+    <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'),
+        class: "portfolio-card__thumb-image" %>
   </div>
 
   <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item),

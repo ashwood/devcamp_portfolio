@@ -27,14 +27,17 @@
     </div>
 
     <div class="form__row-group">
-      <h2 class="form__group-title">Upload images</h2>
+      <h2 class="form__group-title">Image upload</h2>
       <div class="form__group">
-        <%= f.label :main_image, class: 'form__label form__label--padded' %>
-        <%= f.file_field :main_image, class: 'form__file-select' %>
+        <label class="button form__file-button">
+          Upload a main image file. <%= f.file_field :main_image, style: 'display: none' %>
+        </label>
       </div>
+
       <div class="form__group">
-        <%= f.label :thumb_image, class: 'form__label' %>
-        <%= f.file_field :thumb_image, class: 'form__file-select' %>
+        <label class="button form__file-button">
+          Upload a thumbnail image file. <%= f.file_field :thumb_image, style: 'display: none' %>
+        </label>
       </div>
     </div>
 
