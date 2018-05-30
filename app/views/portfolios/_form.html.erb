@@ -1,6 +1,10 @@
-
-
 <%= form_for(@portfolio_item) do |f| %>
+  <% if @portfolio_item.errors.any? %>
+    <% @portfolio_item.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "Devcamp Portfolio", sticky: false) %>
+    <% end %>
+  <% end %>
+
   <div class="form__group">
     <%= f.label :title, class: 'form__label' %>
     <%= f.text_field :title, class: 'form__input' %>
