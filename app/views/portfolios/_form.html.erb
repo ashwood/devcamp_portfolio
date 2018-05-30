@@ -16,32 +16,24 @@
     <%= f.text_area :body, class: 'form__input', rows: 7 %>
   </div>
 
+  <h2 class="form__group-title">Technologies used:</h2>
 
-  <div class="form__row">
-
-    <div class="form__row-group">
-      <h2 class="form__group-title">Technologies used:</h2>
-      <%= f.fields_for :technologies do |technology_form| %>
-        <%= technology_form.text_field :name, class: 'form__input form__input--short'%>
-      <% end %>
-    </div>
-
-    <div class="form__row-group">
-      <h2 class="form__group-title">Image upload</h2>
-      <div class="form__group">
-        <label class="button form__file-button">
-          Upload a main image file. <%= f.file_field :main_image, style: 'display: none' %>
-        </label>
-      </div>
-
-      <div class="form__group">
-        <label class="button form__file-button">
-          Upload a thumbnail image file. <%= f.file_field :thumb_image, style: 'display: none' %>
-        </label>
-      </div>
-    </div>
-
+  <div class="form__group">
+    <%= f.fields_for :technologies do |technology_form| %>
+      <%= render 'technology_fields', f: technology_form %>
+    <% end %>
+    <%= link_to_add_association 'Add technology', f, :technologies %>
   </div>
+
+
+    <div class="form__group">
+      <label class="button form__file-button">
+        Upload a main image file. <%= f.file_field :main_image, style: 'display: none' %>
+      </label>
+      <label class="button form__file-button">
+        Upload a thumbnail image file. <%= f.file_field :thumb_image, style: 'display: none' %>
+      </label>
+    </div>
 
   <div class="form__group">
     <%= f.submit 'submit', class: 'form__submit-button button' %>
