@@ -15,6 +15,9 @@
     <%= f.text_area :body, class: 'form__input', rows: 15, placeholder: "Enter your posts content here." %>
   </div>
 
+
+  <%= f.collection_select(:topic_id, @topics, :id, :title, prompt: true) %>
+
   <div class="form__group">
     <%= f.submit "Submit", class: 'form__submit-button button' %>
   </div>
