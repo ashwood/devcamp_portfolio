@@ -1,13 +1,14 @@
 .button {
   @include secondary-font;
-  border: 1px solid;
-  padding: 1rem 3rem .5rem;
+  border: 1px solid $brand-color;
+  padding: 1.1rem 3.2rem .6rem;
   border-radius: 3px;
   display: block;
   font-size: 1.4rem;
   line-height: 1.4rem;
   margin: 0 auto;
-  background-color: transparent;
+  background-color: $brand-color;
+  color: white;
   &:hover {
     box-shadow: 1px 1px 1px $black-20;
     opacity: .7;
