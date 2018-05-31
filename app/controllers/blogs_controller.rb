@@ -10,7 +10,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @page_title = "My Portfolio Blog"
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = Blog.page(params[:page]).per(5).by_most_recent
   end
 
   # GET /blogs/1
