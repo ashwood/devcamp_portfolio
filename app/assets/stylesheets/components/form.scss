@@ -76,10 +76,6 @@
       border-color: $black-70;
     }
 
-    &:focus:invalid {
-      border-bottom-color: red;
-    }
-
     &--short {
       width: 28rem;
       padding: 0 .5rem;

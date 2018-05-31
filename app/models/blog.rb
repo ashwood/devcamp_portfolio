@@ -10,4 +10,10 @@ class Blog < ApplicationRecord
   def self.by_most_recent
     order("created_at DESC")
   end
+
+  def self.published
+    where(status: "published")
+  end
+
+  scope :draft_status, -> { where(status: 'draft') }
 end

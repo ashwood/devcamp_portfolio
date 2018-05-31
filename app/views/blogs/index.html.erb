@@ -1,5 +1,11 @@
 <div class="blogs-container">
+
+  <% if logged_in?(:site_admin) %>
     <%= render @blogs %>
+  <% else %>
+    <%= render @published_blogs %>
+  <% end %>
+
 
   <% if logged_in?(:site_admin) %>
     <div class="blog-card__add-new">

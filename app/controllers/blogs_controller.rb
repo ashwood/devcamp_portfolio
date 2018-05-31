@@ -11,6 +11,7 @@ class BlogsController < ApplicationController
   def index
     @page_title = "My Portfolio Blog"
     @blogs = Blog.page(params[:page]).per(5).by_most_recent
+    @published_blogs = Blog.page(params[:page]).per(5).by_most_recent.published
   end
 
   # GET /blogs/1
