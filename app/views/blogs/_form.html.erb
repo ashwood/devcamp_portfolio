@@ -15,10 +15,19 @@
     <%= f.text_area :body, class: 'form__input', rows: 15, placeholder: "Enter your posts content here." %>
   </div>
 
+  <div class="form__group">
+    <h2 class="form__group-title">Select a topic</h2>
+    <%= f.collection_select(:topic_id, @topics, :id, :title, prompt: true) %>
+  </div>
 
-  <%= f.collection_select(:topic_id, @topics, :id, :title, prompt: true) %>
+  <div class="form__group">
+    <h2 class="form__group-title">Select status</h2>
+    <%= f.select(:status, Blog.statuses.keys, prompt: true) %>
+  </div>
 
   <div class="form__group">
     <%= f.submit "Submit", class: 'form__submit-button button' %>
   </div>
 <% end %>
+
+
