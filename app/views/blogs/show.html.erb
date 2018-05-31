@@ -10,14 +10,14 @@
       <% if logged_in?(:site_admin) %>
         <div class="blog__admin-links">
           <%= link_to @blog.status.capitalize, toggle_status_blog_path(@blog),
-              class: "blog__link" %> //
+              class: "blog__link" %><%= fa_icon "toggle-on", class: "blog__icon" %> //
 
           <%= link_to 'Edit post', edit_blog_path(@blog),
-              class: "blog__link" %> //
+              class: "blog__link" %><%= fa_icon "pencil", class: "blog__icon" %> //
 
           <%= link_to 'Delete post', @blog,
               method: :delete, data: { confirm: 'Are you sure?' },
-              class: "blog__link" %>
+              class: "blog__link" %><%= fa_icon "trash", class: "blog__icon" %>
         </div>
       <% end %>
     </div>

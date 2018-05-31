@@ -46,9 +46,13 @@
   }
 
   &__link {
-    margin: 1rem 1rem 0;
+    margin: 1rem .8rem 0;
     display: inline-block;
     font-size: 1.2rem;
+  }
+
+  &__icon {
+    margin: 0 1rem 0 0;
   }
 
   &__comments-container {
