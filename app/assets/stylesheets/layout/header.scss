@@ -7,10 +7,11 @@
   &__nav {
     display: flex;
     justify-content: center;
-    padding: 2rem 6rem 0;
+    padding: 4rem 6rem 4rem;
 
     &--split{
       justify-content: space-between;
+      align-items: center;
     }
 
     &--tall {
@@ -22,6 +23,10 @@
     @include secondary-font;
     list-style: none;
     text-align: center;
+
+    &--blog-list {
+
+    }
   }
 
   &__item,
@@ -48,7 +53,7 @@
   }
 
   &--colored {
-    background-color: #f0f2ef;
+    background: linear-gradient(white, #f0f2ef);
   }
 }
 

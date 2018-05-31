@@ -1,21 +1,14 @@
 <nav class="header header--colored">
-  <div class="header__nav header__nav--split">
+  <div class="header__nav header__nav header__nav--split">
     <%= link_to image_tag ('logo-dark.png'),
         class: 'logo--small' %>
 
     <ul class="header__list">
-      <%= login_helper 'header__link' %>
-    </ul>
-  </div>
-
-  <div class="header__nav">
-    <%= link_to "Devcamp Portfolio Blog", root_path,
-        class: "header__brand" %>
-  </div>
-
-  <div class="header__nav header__nav--tall">
-    <ul class="header__list">
         <%= nav_helper 'header__link', 'li', 'header__item' %>
+    </ul>
+
+    <ul class="header__list">
+      <%= login_helper 'header__link' %>
     </ul>
   </div>
 </nav>
