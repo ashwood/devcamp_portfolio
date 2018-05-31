@@ -28,14 +28,11 @@
       <%= @blog.body%>
     </p>
 
-    <%= render 'comments/comment_form' %>
-    <% if @blog.comments.any? %>
-      <div class="blog__comments-container">
-        <h2 class="blog__comments-header">Comments</h2>
-        <div id="comments" data-blog-id="<%= @blog.id %>">
-          <%= render @blog.comments %>
-        </div>
+    <div class="blog__comments-container">
+      <div id="comments" data-blog-id="<%= @blog.id %>">
+        <%= render @blog.comments %>
       </div>
-    <% end %>
+    </div>
+    <%= render 'comments/comment_form' %>
 
   </div>

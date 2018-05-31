@@ -1,7 +1,11 @@
 <div class="comment">
-  <div class="comment-card">
-    <img class="comment__author-img"></img>
-    <p class="comment__author"></p>
+  <div class="comment__card">
+    <div class="comment__author">
+      <%= gravatar_helper comment.user %>
+      <span class="comment__name"><%= comment.user.first_name.capitalize %></span>
+      <span class="comment__date">commented <%= distance_of_time_in_words(comment.created_at, Time.now) %> ago.</span>
+    </div>
+
     <p class="comment__content"><%= comment.content %></p>
   </div>
 </div>
