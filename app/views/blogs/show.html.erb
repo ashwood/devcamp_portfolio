@@ -28,22 +28,7 @@
       <%= @blog.body%>
     </p>
 
-    <% unless current_user.is_a? GuestUser %>
-      <div class="form">
-        <div class="form__section">
-          <h2 class="form__group-title">Post a comment</h2>
-          <%= form_for @comment, url: '#' do |f| %>
-            <div class="form__group">
-              <%= f.text_area :content, class: 'form__input' %>
-            </div>
-
-            <div class="form__group">
-              <%= f.submit "Post comment", class: 'form__submit-button button' %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
+    <%= render 'comments/comment_form' %>
 
     <div class="blog__comments-container">
       <h2 class="blog__comments-header">Comments</h2>
