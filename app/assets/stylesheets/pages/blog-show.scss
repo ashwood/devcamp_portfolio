@@ -25,9 +25,12 @@
   }
 
   &__body {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    margin: 3rem 0 0 0;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    margin: 6rem auto 10rem;
+    width: 50%;
+    padding-bottom: 7rem;
+    border-bottom: 1px solid $black-20;
   }
 
   &__date {
@@ -46,6 +49,16 @@
     margin: 1rem 1rem 0;
     display: inline-block;
     font-size: 1.2rem;
+  }
+
+  &__comments-container {
+    padding: 0 0 2rem 0;
+  }
+
+  &__comments-header {
+    @include secondary-font;
+    text-align: center;
+    font-size: 2rem;
   }
 }
 

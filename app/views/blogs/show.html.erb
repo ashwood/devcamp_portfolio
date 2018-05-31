@@ -24,6 +24,15 @@
       <% end %>
     </div>
 
-    <p class="blog__body"><%= @blog.body%></p>
+    <p class="blog__body">
+      <%= @blog.body%>
+    </p>
+
+    <div class="blog__comments-container">
+      <div id="comments" data-blog-id="<%= @blog.id %>">
+        <%= render @blog.comments %>
+      </div>
+    </div>
+    <%= render 'comments/comment_form' %>
 
   </div>
