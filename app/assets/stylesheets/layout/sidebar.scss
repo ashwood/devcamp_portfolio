@@ -2,8 +2,13 @@
   background-color: white;
   padding: 4rem 0 0;
 
+  @include respond(tab-land) {
+      display: none;
+  }
+
   &--fixed {
     position: fixed;
+    padding-left: 2rem;
   }
 
   &--sticky {

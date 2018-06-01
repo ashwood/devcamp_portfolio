@@ -22,13 +22,32 @@ body {
   display: grid;
   max-width: 120rem;
   grid-template-columns: 22rem 98rem;
+
+  @include respond(tab-land) {
+    max-width: 90vw;
+    column-count: 1;
+    grid-template-columns: 1fr;
+  }
 }
 
 .main {
+  width: 100%;
   margin: 4rem 0 0 22rem ;
+
+  @include respond(tab-land) {
+    margin: 12rem 0 0 0;
+  }
+
+  @include respond(phone) {
+    margin: 10rem 0 0 0;
+  }
 }
 
 .footer {
-  width: 98rem;
+  width: 97rem;
+
+  @include respond(tab-land) {
+    width: 90vw;
+  }
 }
 
