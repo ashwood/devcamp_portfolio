@@ -1,8 +1,9 @@
 $( document ).ready(function( $ ) {
   $(document).on('turbolinks:load', function() {
 
-    $('#application-nav__button').on('change', function() {
+    $('#dropdown-menu').on('click', function() {
       $('.application-nav').slideToggle();
+      $('.blog-nav').slideToggle();
     });
 
   });

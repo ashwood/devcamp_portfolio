@@ -2,16 +2,93 @@
   @include secondary-font;
   position: fixed;
   width: 100%;
-  z-index: 23;
+  z-index: 25;
+
+  &--blog {
+    background-color: #f0f2ef;
+  }
+
+  &--application {
+    @include respond(tab-port) {
+      background-color: #2c2c2c;
+    }
+  }
+
+  &__item,
+  &__link {
+    display: inline-block;
+    @include hover-underline;
+  }
+
+  &__logo {
+    height: 3rem;
+    position: absolute;
+    left: 5rem;
+    top: 3rem;
+
+    @include respond(tab-port) {
+      left: 3rem;
+      top: 2.3rem;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+      visibility: hidden;
+      padding: 1rem;
+      position: absolute;
+      color: inherit;
+      top: 2rem;
+      right: 2rem;
+
+      &::after {
+        visibility: visible;
+        content: 'MENU';
+        font-size: 1.4rem;
+        font-weight: 100;
+        opacity: 0.7;
+        padding: 1rem;
+      }
+
+    }
+  }
+}
+
+.blog-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4rem 6rem 3.5rem;
+  width: 100%;
 
   @include respond(tab-port) {
-    background-color: #2c2c2c;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 65rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      width: auto;
+    }
   }
 }
 
 .application-nav {
   display: block;
-  max-width: 60rem;
+  max-width: 70rem;
   padding: 4rem 4rem 4rem;
   margin: auto;
 
@@ -30,38 +107,5 @@
       flex-direction: column;
     }
   }
-
-  &__item,
-  &__link {
-    display: inline-block;
-    margin: .2rem;
-    @include hover-underline;
-  }
-
-  &__button {
-    display: none;
-
-    @include respond(tab-port) {
-      display: block;
-      visibility: hidden;
-      padding: 1rem;
-      background-color: transparent;
-      position: absolute;
-      top: 3rem;
-      right: 6rem;
-
-      &::after {
-        visibility: visible;
-        content: '\2807';
-        font-size: 3rem;
-        font-weight: 100;
-        color: white;
-        padding: 1rem;
-      }
-
-    }
-  }
 }
-
-
 
