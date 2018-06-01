@@ -21,7 +21,8 @@ html {
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient($black-60, $black-60);
+    background: linear-gradient($black-60, $black-60),
+                url(mountains.jpeg);
   background-position: top;
   background-size: cover;
 }

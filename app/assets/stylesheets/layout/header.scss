@@ -1,59 +1,67 @@
 .header {
+  @include secondary-font;
   position: fixed;
   width: 100%;
-  z-index: 25;
-  font-size: 1.4rem;
+  z-index: 23;
 
-  &__nav {
-    display: flex;
-    justify-content: center;
-    padding: 4rem 6rem 4rem;
+  @include respond(tab-port) {
+    background-color: #2c2c2c;
+  }
+}
 
-    &--split{
-      justify-content: space-between;
-      align-items: center;
-    }
+.application-nav {
+  display: block;
+  max-width: 60rem;
+  padding: 4rem 4rem 4rem;
+  margin: auto;
 
-    &--tall {
-      padding: 6rem 6rem 4rem;
-    }
+  @include respond(tab-port) {
+    display: none;
+    padding: 3rem 4rem 3rem;
   }
 
   &__list {
-    @include secondary-font;
     list-style: none;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-    &--blog-list {
-
+    @include respond(tab-port) {
+      flex-direction: column;
     }
   }
 
   &__item,
   &__link {
     display: inline-block;
-    @include hover_underline;
+    margin: .2rem;
+    @include hover-underline;
   }
 
-  &__item + &__item,
-  &__item + &__link,
-  &__link + &__link {
-    margin-left: 4.5rem;
-  }
+  &__button {
+    display: none;
 
-  &__link {
-    display: inline-block;
-  }
+    @include respond(tab-port) {
+      display: block;
+      visibility: hidden;
+      padding: 1rem;
+      background-color: transparent;
+      position: absolute;
+      top: 3rem;
+      right: 6rem;
 
-  &__brand {
-    @include secondary-font;
-    font-size: 2.6rem;
-    opacity: .7;
-    display: block;
-  }
+      &::after {
+        visibility: visible;
+        content: '\2807';
+        font-size: 3rem;
+        font-weight: 100;
+        color: white;
+        padding: 1rem;
+      }
 
-  &--colored {
-    background: linear-gradient(white, #f0f2ef);
+    }
   }
 }
+
+
 

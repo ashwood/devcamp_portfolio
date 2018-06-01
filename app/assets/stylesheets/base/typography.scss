@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Halant:300|Tajawal:300,700');
+@import url('https://fonts.googleapis.com/css?family=Halant:300|Tajawal:100,300,700');
 
 @mixin primary-font {
   font-family: 'Halant', serif;
@@ -23,9 +23,10 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
+  font-weight: 300;
 }
 
-p {
-  font-size: 1.4rem;
+body {
   line-height: 1.8;
+  font-size: 1.6rem;
 }

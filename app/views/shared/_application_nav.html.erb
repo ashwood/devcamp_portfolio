@@ -1,8 +1,9 @@
 <header class="header">
-  <div class="header__nav header__nav--tall">
-    <ul class="header__list">
-        <%= nav_helper 'header__link', 'li', 'header__item' %>
-        <%= login_helper 'header__link' %>
+  <input type="checkbox" class="application-nav__button" id="application-nav__button">
+  <div class="application-nav">
+    <ul class="application-nav__list">
+        <%= nav_helper 'application-nav__link', 'li', 'application-nav__item' %>
+        <%= login_helper 'application-nav__link' %>
     </ul>
   </div>
 </header>
