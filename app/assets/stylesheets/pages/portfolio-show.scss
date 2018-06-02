@@ -2,9 +2,8 @@
 .portfolio {
   margin: 0 0 3rem 0;
   display: grid;
-  grid-template-columns: 1fr 500px;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 3rem 3rem;
-  width: 100%;
 
   @include respond(tab-land) {
     grid-template-columns: auto;
@@ -37,7 +36,7 @@
 
     &--crop {
       margin: 2rem 0 0 0;
-      width: 35vw;
+      width: 100%;
       max-height: 25vh;
       overflow: hidden;
     }

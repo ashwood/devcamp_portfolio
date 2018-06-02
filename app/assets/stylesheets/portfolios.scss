@@ -16,18 +16,20 @@ html {
 .container {
   display: grid;
   max-width: 120rem;
+  width: 90vw;
   margin: 0 auto;
-  grid-template-columns: 22rem auto-fill;
+  grid-template-columns: 22rem 22rem 1fr;
 
   @include respond(tab-land) {
     width: 100%;
     column-count: 1;
-    grid-template-columns: 1fr;
+    grid-template-columns: unset;
   }
 }
 
 .main {
-  margin: 4rem 0 0 22rem;
+  grid-column: 2 / -1;
+  margin: 4rem 0 0 0;
 
   @include respond(tab-land) {
     width: 90vw;

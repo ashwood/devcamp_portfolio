@@ -10,7 +10,6 @@
 
   &--fixed {
     position: fixed;
-    padding-left: 2rem;
 
     @include respond(tab-land) {
       display: none;
