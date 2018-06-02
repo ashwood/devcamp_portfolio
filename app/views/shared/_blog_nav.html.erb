@@ -1,11 +1,13 @@
 <nav class="header header--blog">
   <button class="header__button" id="dropdown-menu"></button>
 
-  <div class="blog-nav">
-    <div class="blog-nav__brand-group">
+      <div class="blog-nav__brand-group">
       <%= link_to image_tag ('logo-dark.png'), class: 'header__logo' %>
       <h1 class="blog-nav__brand">Devcamp Portfolio</h1>
     </div>
+
+  <div class="blog-nav">
+
     <ul class="blog-nav__list">
         <%= nav_helper 'header__link', 'li', 'header__item' %>
         <%= login_helper 'header__link' %>

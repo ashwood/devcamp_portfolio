@@ -4,19 +4,92 @@
   width: 100%;
   z-index: 25;
 
-/*  BLOG SPECFIC DROPDOWN HEADER STYLING*/
-  &--blog {
-    background-color: #f0f2ef;
+  &__item,
+  &__link {
+    display: inline-block;
+    @include hover-underline;
   }
 
-/*  APPLICATION SPECFIC DROPDOWN HEADER STYLING*/
+  &__logo {
+    height: 3.5rem;
+    vertical-align: text-bottom;
+    margin-right: 2rem;
+  }
+
+  &__brand-group {
+    display: none;
+
+    @include respond(tab-land) {
+      display: block;
+      margin: 2rem auto 0 5vw;
+      width: 85%;
+    }
+  }
+
+  &__title {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    opacity: .6;
+    margin: 2rem 0 .5rem 0;
+  }
+
+  &__button {
+    display: none;
+    visibility: hidden;
+    padding: 1rem;
+    position: absolute;
+    color: inherit;
+    top: 2rem;
+    right: 2rem;
+
+    &::after {
+      visibility: visible;
+      content: 'MENU';
+      font-size: 1.4rem;
+      font-weight: 100;
+      padding: 1rem;
+      opacity: .9;
+      border-radius: 3px;
+    }
+
+    @include respond(tab-port) {
+      display: block;
+      z-index: 25;
+    }
+  }
+
+  &--blog {
+    background-color: #f0f2ef;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5rem 3.5rem 5rem;
+
+    @include respond(tab-port) {
+      position: static;
+      padding: 0;
+    }
+
+    .header__button {
+      position: fixed;
+      top: 3.2rem;
+      right: 3%;
+
+      &::after {
+        background-color: white;
+      }
+    }
+  }
+
   &--application {
+
     @include respond(tab-port) {
       background-color: #2c2c2c;
     }
   }
 
-/*  PORTFOLIO LAYOUT SPECFIC DROPDOWN HEADER STYLING*/
   &--portfolio {
     background-color: white;
     width: 100%;
@@ -38,87 +111,31 @@
       }
     }
   }
-
-  &__item,
-  &__link {
-    display: inline-block;
-    @include hover-underline;
-  }
-
-   &__title {
-    font-family: 'Tajawal', sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
-    opacity: .6;
-    margin: 2rem 0 .5rem 0;
-  }
-
-  &__logo {
-    height: 3rem;
-    position: absolute;
-    left: 4rem;
-    top: 5.4rem;
-
-    @include respond(tab-port) {
-      left: 3rem;
-      top: 2.3rem;
-    }
-  }
-
-  &__brand-group {
-    display: none;
-
-    @include respond(tab-land) {
-      display: block;
-      margin: 2rem auto 0 5vw;
-      width: 85%;
-    }
-  }
-
-  &__button {
-    display: none;
-    visibility: hidden;
-    padding: 1rem;
-    position: absolute;
-    color: inherit;
-    top: 2rem;
-    right: 2rem;
-
-    &::after {
-      visibility: visible;
-      content: 'MENU';
-      font-size: 1.4rem;
-      font-weight: 100;
-      padding: 1rem;
-      background-color: white;
-      opacity: .9;
-      border-radius: 3px;
-    }
-
-    @include respond(tab-port) {
-      display: block;
-    }
-  }
 }
 
 .blog-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem 5rem 3.5rem 10rem;
-  width: 100%;
+  padding-top: 2rem;
 
   @include respond(tab-port) {
     display: none;
-    flex-direction: column;
-    justify-content: center;
+    width: 100vw;
+    z-index: 20;
+    background-color: white;
+    position: fixed;
+    padding: 2rem;
   }
 
   &__brand {
     @include primary-font;
+  }
+
+  &__brand-group {
+    display: flex;
+    align-items: center;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+    }
   }
 
   &__list {
@@ -131,7 +148,7 @@
 
     @include respond(tab-port) {
       flex-direction: column;
-      width: auto;
+      width: 100%;
     }
   }
 }
