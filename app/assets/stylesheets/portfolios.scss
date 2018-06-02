@@ -13,33 +13,25 @@ html {
 @include dark-theme;
 }
 
-body {
-  @include flex-column;
-  align-items: center
-}
-
 .container {
   display: grid;
   max-width: 120rem;
+  margin: 0 auto;
   grid-template-columns: 22rem 98rem;
 
   @include respond(tab-land) {
-    max-width: 90vw;
+    width: 100%;
     column-count: 1;
     grid-template-columns: 1fr;
   }
 }
 
 .main {
-  width: 100%;
+  width: 90vw;
   margin: 4rem 0 0 22rem ;
 
   @include respond(tab-land) {
-    margin: 12rem 0 0 0;
-  }
-
-  @include respond(phone) {
-    margin: 10rem 0 0 0;
+    margin: 4rem auto 0 auto;
   }
 }
 
@@ -50,4 +42,13 @@ body {
     width: 90vw;
   }
 }
+
+.header {
+  display: none;
+
+  @include respond(tab-land) {
+    display: block;
+  }
+}
+
 

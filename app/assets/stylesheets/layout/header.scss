@@ -4,13 +4,38 @@
   width: 100%;
   z-index: 25;
 
+/*  BLOG SPECFIC DROPDOWN HEADER STYLING*/
   &--blog {
     background-color: #f0f2ef;
   }
 
+/*  APPLICATION SPECFIC DROPDOWN HEADER STYLING*/
   &--application {
     @include respond(tab-port) {
       background-color: #2c2c2c;
+    }
+  }
+
+/*  PORTFOLIO LAYOUT SPECFIC DROPDOWN HEADER STYLING*/
+  &--portfolio {
+    background-color: white;
+    width: 100%;
+
+    .header__item,
+    .header__link {
+      display: block;
+    }
+
+    .header__button {
+      display: block;
+      top: 2rem;
+      right: 3%;
+
+      &::after {
+        background-color: white;
+        opacity: .9;
+        border-radius: 3px;
+      }
     }
   }
 
@@ -18,6 +43,16 @@
   &__link {
     display: inline-block;
     @include hover-underline;
+  }
+
+   &__title {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    opacity: .6;
+    margin: 2rem 0 .5rem 0;
   }
 
   &__logo {
@@ -32,27 +67,36 @@
     }
   }
 
+  &__brand-group {
+    display: none;
+
+    @include respond(tab-land) {
+      display: block;
+      margin: 2rem auto 0 auto;
+      width: 85%;
+    }
+  }
+
   &__button {
     display: none;
+    visibility: hidden;
+    padding: 1rem;
+    position: absolute;
+    color: inherit;
+    top: 2rem;
+    right: 2rem;
+
+    &::after {
+      visibility: visible;
+      content: 'MENU';
+      font-size: 1.4rem;
+      font-weight: 100;
+      opacity: 0.7;
+      padding: 1rem;
+    }
 
     @include respond(tab-port) {
       display: block;
-      visibility: hidden;
-      padding: 1rem;
-      position: absolute;
-      color: inherit;
-      top: 2rem;
-      right: 2rem;
-
-      &::after {
-        visibility: visible;
-        content: 'MENU';
-        font-size: 1.4rem;
-        font-weight: 100;
-        opacity: 0.7;
-        padding: 1rem;
-      }
-
     }
   }
 }
@@ -109,3 +153,19 @@
   }
 }
 
+.portfolio-nav {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+
+  @include respond(phone) {
+    justify-content: flex-start;
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    margin-right: 2rem;
+    padding: 1rem 0 2rem 2.5rem;
+  }
+}
