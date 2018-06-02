@@ -1,11 +1,16 @@
 
 .portfolio {
   margin: 0 0 3rem 0;
-  min-width: 98rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 500px;
   grid-gap: 3rem 3rem;
   width: 100%;
+
+  @include respond(tab-land) {
+    grid-template-columns: auto;
+    grid-gap: auto;
+    grid-template-rows: auto auto;
+  }
 
   &__main-image {
     object-fit: cover;
@@ -13,9 +18,14 @@
     width: 100%;
 
     &--crop{
-      width: 30vw;
+      width: 100%;
       height: 82vh;
       overflow: hidden;
+
+      @include respond(tab-land) {
+        width: 100%;
+        height: 50vh;
+      }
     }
   }
 
@@ -31,18 +41,26 @@
       max-height: 25vh;
       overflow: hidden;
     }
+
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 
   &__header {
   }
 
   &__title {
-  @include secondary-font;
-  font-weight: 200;
-  text-transform: uppercase;
-  margin: 4rem 0 0 0;
-  font-size: 3rem;
-  line-height: 3.5rem;
+    @include secondary-font;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 4rem 0 0 0;
+    font-size: 3rem;
+    line-height: 3.5rem;
+
+    @include respond(tab-land) {
+      margin: 2rem 0 0 0;
+    }
   }
 
   &__subtitle {
@@ -91,9 +109,10 @@
 
   &__link-group {
     @include secondary-font;
-    margin: 2rem 0 0;
-    font-size: 1.2rem;
+    margin: 5rem 0 0;
+    font-size: 1.4rem;
     opacity: 0.8;
+    text-align: right;
   }
 
   &__link {
