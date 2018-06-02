@@ -17,7 +17,7 @@ html {
   display: grid;
   max-width: 120rem;
   margin: 0 auto;
-  grid-template-columns: 22rem 98rem;
+  grid-template-columns: 22rem auto-fill;
 
   @include respond(tab-land) {
     width: 100%;
@@ -27,19 +27,11 @@ html {
 }
 
 .main {
-  width: 90vw;
-  margin: 4rem 0 0 22rem ;
-
-  @include respond(tab-land) {
-    margin: 4rem auto 0 auto;
-  }
-}
-
-.footer {
-  width: 97rem;
+  margin: 4rem 0 0 22rem;
 
   @include respond(tab-land) {
     width: 90vw;
+    margin: 4rem auto 0 auto;
   }
 }
 

@@ -1,0 +1,25 @@
+<div class="header__brand-group">
+  <h1 class="header__brand">Devcamp Portfolio</h1>
+  <p class="header__description">Welcome to my portfolio.</p>
+
+</div>
+
+<header class="header header--portfolio">
+  <button class="header__button" id="dropdown-menu"></button>
+  <div class="portfolio-nav">
+    <ul class="portfolio-nav__list">
+      <p class="header__title">Navigation</p>
+        <%= nav_helper 'header__link', 'li', 'header__item' %>
+        <%= login_helper 'header__link' %>
+    </ul>
+
+    <ul class="portfolio-nav__list">
+      <p class="header__title">Sort by Technology</p>
+      <li><a class="header__link" href="#">Angular</a></li>
+      <li><a class="header__link" href="#">Ruby on Rails</a></li>
+      <li><a class="header__link" href="#">React JS</a></li>
+      <li><a class="header__link" href="#">HTML & CSS</a></li>
+      <li><a class="header__link" href="#">Vanilla JS</a></li>
+    </ul>
+  </div>
+</header>
