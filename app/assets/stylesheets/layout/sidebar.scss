@@ -3,19 +3,23 @@
   padding: 4rem 0 0;
 
   @include respond(tab-land) {
-      display: none;
+    padding: 4rem 4rem 2rem;
+    margin-top: 3rem;
+    text-align: center;
   }
 
   &--fixed {
     position: fixed;
     padding-left: 2rem;
+
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 
-  &--sticky {
-    position: sticky;
-    top: 23.5rem;
-    max-width: 28rem;
-    padding: 4rem 4rem 0;
+  &--blog {
+    padding: 4rem 4rem 2rem;
+    border-radius: 3px;
   }
 
   &__brand {
@@ -30,18 +34,39 @@
   &__description {
     @include center-align;
     margin: 1rem 0 0 0;
+
+    @include respond(tab-land) {
+      max-width: 450px;
+      margin: 1rem auto 0;
+    }
   }
 
   &__nav {
 
     &:first-of-type {
-      margin: 6rem 0 0 0;
+      margin-top: 6rem;
     }
 
     + .sidebar__nav {
-      margin: 4rem 0 0 0;
+      margin-top: 4rem;
     }
 
+    @include respond(tab-land) {
+      display: inline-block;
+      vertical-align: text-top;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__nav--container {
+
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
   }
 
   &__title {
@@ -57,17 +82,32 @@
   &__list {
     list-style: none;
     font-size: 1.4rem;
+
+    @include respond(tab-land) {
+      display: flex;
+      justify-content: space-around;
+      width: 23rem;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     display: block;
     margin: 0 0 1rem 0;
+
+    @include respond(tab-land) {
+      display: inline-block;
+    }
   }
 
   &__link {
     display: block;
     color: $black-60;
     margin: 0 0 1rem 0;
+
+    @include respond(tab-land) {
+      display: inline-block;
+    }
 
     &--active {
       color: $brand-color;
@@ -83,6 +123,10 @@
       display: grid;
       grid-template-columns: repeat(3, 3.5rem);
       grid-template-rows: repeat(3, 3rem);
+
+      @include respond(tab-land) {
+        justify-content: center;
+      }
   }
 
   &__icon {

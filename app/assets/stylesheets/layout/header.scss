@@ -58,8 +58,8 @@
   &__logo {
     height: 3rem;
     position: absolute;
-    left: 5rem;
-    top: 3rem;
+    left: 4rem;
+    top: 5.4rem;
 
     @include respond(tab-port) {
       left: 3rem;
@@ -104,9 +104,9 @@
 .blog-nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  padding: 4rem 6rem 3.5rem;
+  padding: 4rem 5rem 3.5rem 10rem;
   width: 100%;
 
   @include respond(tab-port) {
@@ -115,13 +115,17 @@
     justify-content: center;
   }
 
+  &__brand {
+    @include primary-font;
+  }
+
   &__list {
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 65rem;
+    width: 55rem;
 
     @include respond(tab-port) {
       flex-direction: column;
