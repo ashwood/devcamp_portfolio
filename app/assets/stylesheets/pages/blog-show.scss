@@ -2,62 +2,74 @@
   grid-column: 1 / 2;
   background-color: white;
   border-radius: 3px;
+  display: grid;
+  grid-template-rows: auto-fill;
+  grid-row-gap: 4rem;
+  padding: 6rem 0;
 
-  &__header {
+  &-header {
     font-weight: 200;
     text-align: center;
-  }
 
-  &__title {
-    @incldue secondary-font;
-    font-size: 3rem;
-    line-height: 2.8rem;
-    margin: 10rem 0 0 0;
-    opacity: 0.8;
-  }
+    &__title {
+      @incldue secondary-font;
+      font-size: 3rem;
+      opacity: 0.8;
+      line-height: 3.2rem;
+      max-width: 500px;
+      width: 90%;
+      margin: 0 auto;
+    }
 
-  &__header::after {
-    border-bottom: 1px solid $black-20;
-    content: " ";
-    display: block;
-    margin: 4rem auto 0;
-    max-width: 500px;
-    width: 80%;
+    &__topic {
+      padding-top: 4rem;
+      color: $brand-color;
+    }
+
+    &__date {
+      padding-top: .5rem;
+      font-size: 1.4rem;
+      opacity: 0.8;
+      font-style: italic;
+    }
+
+    &::after {
+      border-bottom: 1px solid $black-20;
+      content: " ";
+      display: block;
+      margin: 3rem auto 0;
+      max-width: 500px;
+      width: 80%;
+    }
   }
 
   &__body {
-    font-size: 1.6rem;
     line-height: 2.5rem;
     max-width: 500px;
-    margin: 5rem auto 0;
-    padding: 0 2rem 6rem;
+    width: 90%;
+    margin: 0 auto;
     border-bottom: 1px solid $black-20;
+    padding-bottom: 4rem;
   }
 
-  &__date {
-    font-size: 1.4rem;
-    margin: 3rem 0 0 0;
-    opacity: 0.8;
-    font-style: italic;
-  }
-
-  &__admin-links {
+  &__links {
     text-align: center;
-    margin: 1rem 0 0rem;
+    font-size: 1.4rem;
   }
 
   &__link {
-    margin: 1rem .8rem 0;
+    margin: 0 .8rem 0;
     display: inline-block;
-    font-size: 1.2rem;
-  }
-
-  &__icon {
-    margin: 0 1rem 0 0;
   }
 
   &__comments-container {
-    padding: 0 0 2rem 0;
+    width: 90%;
+    max-width: 500px;
+    margin: 2rem auto 3rem;
+
+    .form {
+      margin-bottom: 4rem;
+    }
   }
 
   &__comments-header {
