@@ -7,13 +7,7 @@ class Blog < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
-  def self.by_most_recent
+  def self.recent
     order("created_at DESC")
   end
-
-  def self.published
-    where(status: "published")
-  end
-
-  scope :draft_status, -> { where(status: 'draft') }
 end
