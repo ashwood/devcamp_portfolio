@@ -28,11 +28,13 @@ html {
   max-width: 140rem;
   margin: 0 auto;
   grid-template-columns: 1fr 28rem;
-  justify-content: space-around;
+  grid-gap: 3rem;
 
-  @include respond(tab-land) {
+  @include respond(tab-port) {
     grid-template-columns: auto;
     grid-template-rows: auto-fill;
+    padding: 3rem 0 4rem 0;
+    width: 90vw;
   }
 }
 
