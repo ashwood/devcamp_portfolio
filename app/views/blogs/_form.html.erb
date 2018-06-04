@@ -17,7 +17,12 @@
 
   <div class="form__group">
     <h2 class="form__group-title">Select a topic</h2>
-    <%= f.collection_select(:topic_id, @topics, :id, :title, prompt: true) %>
+    <%= f.collection_select(:topic_id, Topic.all, :id, :title,
+                            {
+                              selected: blog.topic_id,
+                              include_blank: true
+                            } )
+    %>
   </div>
 
   <div class="form__group">
