@@ -1,7 +1,7 @@
 .blog {
-  flex-basis: 80%;
-  margin: 0 3rem 0 0;
+  grid-column: 1 / 2;
   background-color: white;
+  border-radius: 3px;
 
   &__header {
     font-weight: 200;
@@ -20,16 +20,17 @@
     border-bottom: 1px solid $black-20;
     content: " ";
     display: block;
-    margin: 3rem auto;
-    width: 400px;
+    margin: 4rem auto 0;
+    max-width: 500px;
+    width: 80%;
   }
 
   &__body {
     font-size: 1.6rem;
     line-height: 2.5rem;
-    margin: 6rem auto 10rem;
-    width: 50%;
-    padding-bottom: 7rem;
+    max-width: 500px;
+    margin: 5rem auto 0;
+    padding: 0 2rem 6rem;
     border-bottom: 1px solid $black-20;
   }
 
