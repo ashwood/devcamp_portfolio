@@ -1,3 +1,20 @@
+// reset list styles for navigation items
+
+@mixin list-reset {
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+
 
 // center and flexbox alignment
 

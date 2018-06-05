@@ -1,5 +1,4 @@
-<div class="form">
-  <div class="form__card">
+<div class="form form--card">
     <h2 class="form__title">Edit <%= resource_name.to_s.humanize %></h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -68,6 +67,5 @@
           data: { confirm: "Are you sure?" }, method: :delete,
           class: "form__link" %>
     </div>
-  </div>
 </div>
 

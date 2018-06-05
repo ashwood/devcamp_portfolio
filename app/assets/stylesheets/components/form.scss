@@ -13,11 +13,12 @@
     margin: 0 auto;
   }
 
-  &__card {
-    width: 45rem;
+  &--card {
+    width: 80%;
+    max-width: 40rem;
     border-radius: 3px;
     box-shadow: 0px 5px 10px $black-50;
-    padding: 5rem 6rem 4rem;
+    padding: 5rem 3rem 4rem;
   }
 
   &__title {
@@ -61,9 +62,9 @@
 
   &__input {
     display: block;
-    width: 100%;
+    width: 96%;
     margin: .8rem 0 0 0;
-    padding: .5rem .5rem;
+    padding: 1% 2%;
     line-height: 1.5em;
     border-bottom: 1px solid $black-40;
     background-color: $black-03;
@@ -97,7 +98,6 @@
   }
 
   &__radio-input {
-    visibility: hidden;
     opacity: .7;
 
     &:active,
@@ -106,20 +106,6 @@
     &:checked {
       opacity: .9;
     }
-
-    &:after {
-      content: '○';
-      font-size: 1.4rem;
-      line-height: 1rem;
-      padding: 0 4rem 0 0;
-      opacity: .8;
-      visibility: visible;
-    }
-
-    &:checked::after {
-      content: '◉';
-    }
-
   }
 
   &__radio-label {
@@ -162,5 +148,4 @@
   &__select {
     margin-top: 2rem;
   }
-
 }

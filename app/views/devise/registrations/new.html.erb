@@ -1,5 +1,4 @@
-<div class="form">
-  <div class="form__card">
+<div class="form form--card">
     <h2 class="form__title">Sign up</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -39,5 +38,4 @@
     <div class="form__link-group">
       Already have an account? <%= render "devise/shared/links" %>
     </div>
-  </div>
 </div>

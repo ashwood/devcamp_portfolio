@@ -1,9 +1,5 @@
-<div class="form">
-
-  <div class="form__card">
-
+<div class="form form--card">
     <h2 class="form__title">Resend confirmation instructions</h2>
-
 
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
       <%= devise_error_messages! %>
@@ -26,6 +22,4 @@
     <div class="form__link-group">
       <%= render "devise/shared/links" %>
     </div>
-
-  </div>
 </div>
