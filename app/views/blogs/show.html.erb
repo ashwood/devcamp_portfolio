@@ -10,7 +10,9 @@
     </p>
   </div>
 
-  <p class="blog__body"><%= @blog.body%></p>
+  <div>
+    <%= markdown @blog.body%>
+  </div>
 
   <div class="blog__comments-container">
     <%= render 'comments/comment_form' %>
