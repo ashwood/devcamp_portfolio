@@ -10,12 +10,17 @@
     <div class="sidebar__nav">
       <p class="sidebar__title">View by topic</p>
       <ul class="sidebar__list">
-        <li><a class="sidebar__link" href="#">Angular</a></li>
-        <li><a class="sidebar__link" href="#">Ruby on Rails</a></li>
-        <li><a class="sidebar__link
-                  sidebar__link--active" href="#">React JS</a></li>
-        <li><a class="sidebar__link" href="#">HTML & CSS</a></li>
-        <li><%= link_to 'View all topics', blogs_path, class: "sidebar__link" %></li>
+
+        <% @sidebar_topics.each do |topic| %>
+          <li><%= link_to topic.title, topic_path(topic),
+                  class: "sidebar__link
+                          sidebar__link#{active?(topic_url(topic))}" %></li>
+        <% end %>
+
+        <li><%= link_to 'View all posts', blogs_path,
+                class: "sidebar__link
+                        sidebar__link#{active?(blogs_path)}" %></li>
+
       </ul>
     </div>
 
