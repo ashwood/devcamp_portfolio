@@ -4,7 +4,8 @@
       <%= link_to blog.title, blog %></h2>
 
     <p class="blog-card__body">
-      <%= blog.body.truncate_words(100, omission: '... (continued)')%></p>
+      <%= truncate_helper blog.body, blog_path(blog), "blog-card__link" %>
+    </p>
 
     <p class="blog-card__date">Published
       <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago.</p>
@@ -26,3 +27,5 @@
     <% end %>
 
   </div>
+
+

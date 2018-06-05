@@ -3,7 +3,7 @@
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(300px, 1fr);
+  grid-template-rows: minmax(min-content, 300px);
 
   @include respond(tab-land) {
     grid-column: 1 / 2;
