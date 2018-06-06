@@ -19,8 +19,10 @@
       <%= render 'shared/blog_nav' %>
 
       <div class="main">
-        <%= yield %>
-        <%= render 'shared/blog_sidebar' %>
+        <div class="<%= grid_type %>">
+          <%= yield %>
+          <%= render 'shared/blog_sidebar' %>
+        </div>
       </div>
 
       <%= alerts %>

@@ -27,4 +27,8 @@ module BlogsHelper
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
   end
+
+  def grid_type
+    @grid_type ? 'modular-grid' : 'column-grid'
+  end
 end

@@ -1,11 +1,9 @@
 .blog {
-  grid-column: 2 / span 1;
   background-color: white;
   border-radius: 3px;
   display: grid;
-  grid-template-rows: auto-fill;
   grid-row-gap: 4rem;
-  padding: 6rem 0;
+  grid-column: 2 / span 1;
 
   &-header {
 
@@ -23,15 +21,6 @@
       font-size: 1.4rem;
       opacity: 0.8;
       font-style: italic;
-    }
-
-    &::after {
-      border-bottom: 1px solid $black-20;
-      content: " ";
-      display: block;
-      margin: 3rem auto 0;
-      max-width: 40rem;
-      width: 80%;
     }
   }
 
@@ -55,6 +44,7 @@
 
   &__comments-container {
     margin: 2rem auto 3rem;
+    width: 100%;
 
     .form {
       margin-bottom: 4rem;

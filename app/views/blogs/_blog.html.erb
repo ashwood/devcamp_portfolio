@@ -4,7 +4,7 @@
       <%= link_to blog.title, blog %></h2>
 
     <p class="blog-card__body">
-      <%= truncate_helper blog.body, blog_path(blog), "blog-card__link" %>
+      <%= markdown (truncate_helper blog.body, blog_path(blog), "blog-card__link") %>
     </p>
 
     <p class="blog-card__date">Published
