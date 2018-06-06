@@ -38,8 +38,22 @@
   }
 
   &__link {
-    margin: 0 .8rem 0;
     display: inline-block;
+  }
+
+  &__icon {
+    opacity: 0.7;
+    display: inline-block;
+    margin: 1.5rem 0 0;
+
+    &:hover {
+      color: $brand-color;
+    }
+
+    &:not(:first-child)::before {
+      content: '|';
+      margin: 0 1rem;
+    }
   }
 
   &__comments-container {

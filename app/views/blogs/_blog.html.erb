@@ -10,21 +10,7 @@
     <p class="blog-card__date">Published
       <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago.</p>
 
-    <% if logged_in?(:site_admin) %>
-      <div class="blog-card__admin-links">
-
-        <%= link_to blog.status.capitalize, toggle_status_blog_path(blog),
-            class: 'blog-card__link' %> //
-
-        <%= link_to 'Edit post', edit_blog_path(blog),
-            class: "blog-card__link" %> //
-
-        <%= link_to 'Delete post', blog,
-            method: :delete, data: { confirm: 'Are you sure?' },
-            class: 'blog-card__link' %>
-
-      </div>
-    <% end %>
+    <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
   </div>
 
 

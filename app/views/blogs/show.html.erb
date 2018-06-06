@@ -2,14 +2,14 @@
 
 <div class="blog">
 
-    <nav class="breadcrumb">
-      <%= link_to 'Home', root_path, class: "breadcrumb__item" %>
-      <%= link_to 'Blog', blog_path, class: "breadcrumb__item" %>
-      <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb__item" %>
-      <span class="breadcrumb__item breadcrumb__item--active">
-        <%= truncate(@blog.title) %>
-      </span>
-    </nav>
+  <nav class="breadcrumb">
+    <%= link_to 'Home', root_path, class: "breadcrumb__item" %>
+    <%= link_to 'Blog', blog_path, class: "breadcrumb__item" %>
+    <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb__item" %>
+    <span class="breadcrumb__item breadcrumb__item--active">
+      <%= truncate(@blog.title) %>
+    </span>
+  </nav>
 
   <div class="blog-header">
     <h1 class="blog-header__title"><%= link_to @blog.title, @blog %></h1>
@@ -17,6 +17,7 @@
     <p class="blog-header__date">Published
       <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago.
     </p>
+
   </div>
 
   <div class="blog__body">
@@ -31,21 +32,9 @@
     </div>
   </div>
 
-    <div class="blog__links">
-      <% if logged_in?(:site_admin) %>
-        <%= link_to @blog.status.capitalize, toggle_status_blog_path(@blog),
-            class: "blog__link" %> //
-
-        <%= link_to 'Edit post', edit_blog_path(@blog),
-            class: "blog__link" %> //
-
-        <%= link_to 'Delete post', @blog,
-            method: :delete, data: { confirm: 'Are you sure?' },
-            class: "blog__link" %> //
-      <% end %>
-        <%= link_to 'Back to all posts', blogs_path,
-            class: "blog__link" %>
-    </div>
-
-
+  <div class="blog__links">
+    <%= link_to 'Back to all posts', blogs_path,
+          class: "blog__link" %>
+    <%= render partial: 'blogs/admin_actions', locals: { blog: @blog } %>
   </div>
+</div>

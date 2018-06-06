@@ -1,0 +1,7 @@
+<% if logged_in?(:site_admin) %>
+  <div class="blog__admin-actions">
+    <%= link_to (fa_icon "#{blog_status_toggle(blog)}"), toggle_status_blog_path(blog), class: 'blog__icon' %>
+    <%= link_to (fa_icon "pencil"), edit_blog_path(blog), class: 'blog__icon' %>
+    <%= link_to (fa_icon "trash-o"), blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'blog__icon' %>
+  </div>
+<% end %>

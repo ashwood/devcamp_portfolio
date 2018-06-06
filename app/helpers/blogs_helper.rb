@@ -31,4 +31,8 @@ module BlogsHelper
   def grid_type
     @grid_type ? 'modular-grid' : 'column-grid'
   end
+
+  def blog_status_toggle(blog)
+    blog.draft? ? 'toggle-off' : 'toggle-on'
+  end
 end
