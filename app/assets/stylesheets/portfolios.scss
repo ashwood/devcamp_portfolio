@@ -4,12 +4,14 @@
 @import 'abstracts/*';
 @import 'base/*';
 @import 'components/*';
-@import 'layout/*';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
 @import 'pages/portfolios-index';
 @import 'pages/portfolio-show';
 
 html {
-@include primary-font;
+@include sans-serif-font;
 @include dark-theme;
 }
 

@@ -1,16 +1,44 @@
-@import url('https://fonts.googleapis.com/css?family=Halant:300|Tajawal:100,300,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700|Cormorant:200,400,400i,700');
 
-@mixin primary-font {
-  font-family: 'Halant', serif;
+@mixin sans-serif-font {
+  font-family: 'Raleway', sans-serif;
 }
 
-@mixin secondary-font {
-  font-family: 'tajawal', serif;
+@mixin serif-font {
+  font-family: 'Cormorant', serif;
 }
 
 body {
   font-size: 1.6rem;
   line-height: 150%;
+}
+
+
+h1 {
+  font-size: 3.6rem;
+  line-height: 120%;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.0rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+  opacity: 0.8;
+}
+
+h6 {
+  font-size: 1.6rem;
+  opacity: 0.7;
 }
 
 h1,
@@ -19,34 +47,5 @@ h3,
 h4,
 h5,
 h6 {
-  opacity: 0.9;
+  @include serif-font;
 }
-
-
-h1 {
-  font-size: 2.8rem;
-}
-
-h2 {
-  font-size: 2.4rem;
-}
-
-h3 {
-  font-size: 1.8rem;
-}
-
-h4 {
-  font-size: 1.6rem;
-}
-
-h5 {
-  font-size: 1.4rem;
-  opacity: 0.7;
-}
-
-h6 {
-  font-size: 1.4rem;
-  opacity: 0.6;
-}
-
-

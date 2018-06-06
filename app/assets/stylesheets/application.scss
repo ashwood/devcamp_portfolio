@@ -2,11 +2,12 @@
 @import 'abstracts/*';
 @import 'base/*';
 @import 'components/*';
-@import 'layout/*';
+@import 'layout/header';
+@import 'layout/footer';
 @import 'pages/application-pages';
 
 html {
-@include primary-font;
+@include sans-serif-font;
 @include light-theme;
 }
 

@@ -10,7 +10,7 @@
 @import 'pages/blog-show';
 
 html {
-  @include primary-font;
+  @include sans-serif-font;
   @include dark-theme;
 }
 
@@ -21,16 +21,12 @@ html {
 
 .main {
   display: grid;
-  width: 90%;
-  max-width: 140rem;
-  margin: 0 auto;
-  grid-template-columns: 1fr 28rem;
-  grid-gap: 3rem;
+  grid-template-columns: 1fr minmax(auto, 44.8rem) 22rem 1fr;
 
   @include respond(tab-port) {
-    grid-template-columns: auto;
+/*    grid-template-columns: auto;
     grid-template-rows: auto-fill;
     padding: 3rem 0 4rem 0;
-    width: 90vw;
+    width: 90vw;*/
   }
 }
