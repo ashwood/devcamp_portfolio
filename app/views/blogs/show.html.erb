@@ -1,9 +1,18 @@
+
+
 <div class="blog">
+
+    <nav class="breadcrumb">
+      <%= link_to 'Home', root_path, class: "breadcrumb__item" %>
+      <%= link_to 'Blog', blog_path, class: "breadcrumb__item" %>
+      <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb__item" %>
+      <span class="breadcrumb__item breadcrumb__item--active">
+        <%= truncate(@blog.title) %>
+      </span>
+    </nav>
 
   <div class="blog-header">
     <h1 class="blog-header__title"><%= link_to @blog.title, @blog %></h1>
-
-    <p class="blog-header__topic"><%= @blog.topic.title %></p>
 
     <p class="blog-header__date">Published
       <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago.

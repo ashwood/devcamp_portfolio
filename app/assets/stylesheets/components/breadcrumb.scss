@@ -1,0 +1,21 @@
+.breadcrumb {
+
+  &__item {
+
+    font-size: 1.4rem;
+
+    &:not(:first-child)::before {
+      content: "≫";
+      margin: 0 1rem;
+    }
+
+    &--active {
+      color: $brand-color;
+    }
+
+    &:hover {
+      color: $brand-color;
+    }
+  }
+}
+
