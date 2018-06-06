@@ -1,14 +1,14 @@
-<nav class="header header--blog">
+<nav class="header">
   <button class="header__button" id="dropdown-menu"></button>
 
-      <div class="blog-nav__brand-group">
-      <%= link_to image_tag ('logo-dark.png'), class: 'header__logo' %>
-      <h1 class="blog-nav__brand">Devcamp Portfolio</h1>
-    </div>
+  <div class="header__brand-group">
+    <%= link_to image_tag ('logo-dark.png'), class: 'header__logo' %>
+    <h1 class="header__brand">Devcamp Portfolio</h1>
+  </div>
 
-  <div class="blog-nav">
-
-    <ul class="blog-nav__list">
+  <div class="header__nav">
+    <ul class="header__list">
+        <h6 class="header__title">Navigation</h6>
         <%= nav_helper 'header__link', 'li', 'header__item' %>
         <%= login_helper 'header__link' %>
     </ul>

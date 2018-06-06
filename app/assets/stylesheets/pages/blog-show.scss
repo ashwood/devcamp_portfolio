@@ -16,7 +16,7 @@
       font-size: 3rem;
       opacity: 0.8;
       line-height: 3.2rem;
-      max-width: 500px;
+      max-width: 600px;
       width: 90%;
       margin: 0 auto;
     }
@@ -38,18 +38,19 @@
       content: " ";
       display: block;
       margin: 3rem auto 0;
-      max-width: 500px;
+      max-width: 600px;
       width: 80%;
     }
   }
 
   &__body {
-    line-height: 2.5rem;
-    max-width: 500px;
+    max-width: 600px;
     width: 90%;
     margin: 0 auto;
     border-bottom: 1px solid $black-20;
     padding-bottom: 4rem;
+
+    @include markdown-styles;
   }
 
   &__links {
@@ -64,7 +65,7 @@
 
   &__comments-container {
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 2rem auto 3rem;
 
     .form {

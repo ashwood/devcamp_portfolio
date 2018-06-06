@@ -1,9 +1,11 @@
 @import "gritter";
 @import "font-awesome";
-@import 'base/*';
 @import 'abstracts/*';
+@import 'base/*';
 @import 'components/*';
-@import 'layout/*';
+@import 'layout/footer';
+@import 'layout/blog-header';
+@import 'layout/sidebar';
 @import 'pages/blogs-index';
 @import 'pages/blog-show';
 
@@ -14,15 +16,10 @@ html {
 
 .container {
   width: 100%;
-  background: linear-gradient($white-10, $white-20),
-                url(mountains.jpeg);
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
+  border-top: 1rem solid $brand-color;
 }
 
 .main {
-  padding: 12rem 0 4rem 0;
   display: grid;
   width: 90%;
   max-width: 140rem;
@@ -36,9 +33,4 @@ html {
     padding: 3rem 0 4rem 0;
     width: 90vw;
   }
-}
-
-.footer {
-  color: white;
-  opacity: 1;
 }

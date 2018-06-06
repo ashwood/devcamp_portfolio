@@ -365,8 +365,21 @@ button {
 html {
   box-sizing: border-box;
   line-height: 1.15; /* 1 */
-  font-size: 62.5%;
   width: 100%;
+
+  font-size: 62.5%;
+
+  @include respond(tab-land) { // asks is width < 900px?
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) { // asks is width < 600px?
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px, 12/16 = 75%;
+  }
 }
 
 
