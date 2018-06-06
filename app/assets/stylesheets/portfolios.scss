@@ -17,26 +17,22 @@ html {
 
 .container {
   display: grid;
-  max-width: 120rem;
-  width: 90vw;
-  margin: 0 auto;
-  grid-template-columns: 22rem 22rem 1fr;
+  grid-template-columns: 1fr 22rem minmax(auto, 98rem) 1fr;
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
+  margin-top: 4rem;
 
   @include respond(tab-land) {
-    width: 100%;
-    column-count: 1;
-    grid-template-columns: unset;
+    grid-template-columns: 1fr minmax(auto, 90vw) 1fr;
   }
 }
 
 .main {
   @include brand-accent-color;
-  grid-column: 2 / -1;
-  margin: 4rem 0 0 0;
+  grid-column: 3 / span 1;
 
   @include respond(tab-land) {
-    width: 90vw;
-    margin: 4rem auto 0 auto;
+    grid-column: 2 / span 1;
   }
 }
 
@@ -47,5 +43,19 @@ html {
     display: block;
   }
 }
+
+.sidebar {
+  grid-column: 2 / span 1;
+  position: sticky;
+  top: 4rem;
+  height: 100vh;
+
+  @include respond(tab-land) {
+    display: none;
+  }
+}
+
+
+
 
 

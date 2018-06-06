@@ -21,8 +21,7 @@
 
     @include respond(tab-land) {
       display: block;
-      margin: 2rem auto 0 5vw;
-      width: 85%;
+      grid-column: 2 / span 1;
     }
   }
 

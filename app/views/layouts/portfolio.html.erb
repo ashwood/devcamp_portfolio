@@ -18,18 +18,19 @@
 
     <div class="container">
 
-        <%= render 'shared/portfolio_sidebar' %>
-        <%= render 'shared/portfolio_nav' %>
+      <%= render 'shared/portfolio_sidebar' %>
 
-        <main class="main">
+      <%= render 'shared/portfolio_nav' %>
 
-          <%= yield %>
+      <main class="main">
 
-          <%= alerts %>
+        <%= yield %>
 
-          <%= render 'shared/portfolio_footer' %>
+        <%= alerts %>
 
-        </main>
+        <%= render 'shared/portfolio_footer' %>
+
+      </main>
 
     </div>
 
