@@ -8,14 +8,4 @@
     text-transform: uppercase;
     margin: 0 0 0 1.3rem;
   }
-
-  .current {
-    color: $brand-color;
-  }
-
-  span a {
-    &:hover {
-      color: $brand-color;
-    }
-  }
 }

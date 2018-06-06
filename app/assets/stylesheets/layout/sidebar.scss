@@ -1,4 +1,5 @@
 .sidebar {
+  @include brand-accent-color;
   @include list-reset;
   background-color: white;
   padding: 4rem 0 0;
@@ -88,6 +89,7 @@
   }
 
   &__item {
+    @include brand-accent-color;
     display: block;
     margin: 0 0 1rem 0;
 
@@ -97,20 +99,13 @@
   }
 
   &__link {
+    @include brand-accent-color;
     display: block;
     color: $black-60;
     margin: 0 0 1rem 0;
 
     @include respond(tab-land) {
       display: inline-block;
-    }
-
-    &--active {
-      color: $brand-color;
-    }
-
-    &:hover {
-      color: $brand-color;
     }
   }
 

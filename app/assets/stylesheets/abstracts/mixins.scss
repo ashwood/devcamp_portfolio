@@ -1,5 +1,27 @@
 /***********************************************************************/
 
+// brand link and active class styles
+
+@mixin brand-accent-color {
+
+  &--active {
+    color: $brand-color;
+  }
+
+  a {
+    &:hover {
+      color: $brand-color;
+    }
+  }
+
+  .current {
+    color: $brand-color;
+  }
+}
+
+
+/***********************************************************************/
+
 // reset list styles for navigation items
 
 @mixin list-reset {

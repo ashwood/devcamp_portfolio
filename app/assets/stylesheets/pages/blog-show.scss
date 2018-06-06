@@ -13,7 +13,6 @@
 
     &__topic {
       padding-top: 4rem;
-      color: $brand-color;
     }
 
     &__date {
@@ -45,10 +44,6 @@
     opacity: 0.7;
     display: inline-block;
     margin: 1.5rem 0 0;
-
-    &:hover {
-      color: $brand-color;
-    }
 
     &:not(:first-child)::before {
       content: '|';
