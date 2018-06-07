@@ -31,15 +31,24 @@ html {
 
 .column-grid {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 44.8rem) 26rem 26rem 1fr;
+  grid-template-columns: 1fr minmax(auto, 44.8rem) 22rem 22rem 1fr;
 
-  @include respond(tab-land) {
+/*  @include respond(tab-land) {
     grid-template-columns: 1fr minmax(auto, 44.8rem) 1fr 1fr;
-  }
+  }*/
 
   @include respond(tab-port) {
     grid-template-columns: 1fr minmax(auto, 44.8rem) 1fr;
   }
 }
 
+.sidebar {
+  margin-top: 4rem;
+  grid-column: 4 / span 1;
+
+  @include respond(tab-land) {
+    grid-column: 2 / span 1;
+    text-align: center;
+  }
+}
 

@@ -1,9 +1,10 @@
 .blog {
+  grid-column: 2 / span 1;
   background-color: white;
   border-radius: 3px;
   display: grid;
+  grid-template-columns: 1fr;
   grid-row-gap: 4rem;
-  grid-column: 2 / span 1;
 
   &-header {
 
@@ -27,7 +28,7 @@
     margin: 0 auto;
     border-bottom: 1px solid $black-20;
     padding-bottom: 4rem;
-
+    max-width: 44.8rem;
     @include markdown-styles;
   }
 

@@ -72,6 +72,10 @@
 
   &--active::after {
     opacity: 1;
+
+    @include respond(tab-land) {
+      opacity: 0;
+    }
   }
 }
 
