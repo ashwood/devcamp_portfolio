@@ -1,5 +1,20 @@
 <div class="entry">
   <h1 class="entry__title">About the app</h1>
   <p class="entry__subtitle">Devcamp portfolio is a sample portfolio application that includes a blog, a portfolio and an application page layout. Site administrators can sign in and build their own drag and drop portfolio, keep a blog and have a beautiful landing page to welcome their website visitors.</p>
-  <%= link_to "Sign up to get started.", new_user_registration_path, class: "button button--short" %>
+  <%= link_to "Check out my portfolio.", portfolios_path, class: "button button--short" %>
+
+  <div class="skills-container">
+    <% @skills.each do |skill| %>
+      <div class="skill">
+        <p class="skill__title"><%= skill.title %></p>
+        <div class="skill__progress-bar">
+          <div class="skill__progress-fill" style="width: <%= skill.percent_utilized %>%;"></div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
 </div>
+
+
+

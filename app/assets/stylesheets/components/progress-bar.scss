@@ -1,0 +1,30 @@
+.skills-container {
+  max-width: 50rem;
+  background-color: white;
+  border-radius: 3px;
+  padding: 3rem 4rem 5rem;
+  color: black;
+}
+
+.skill {
+
+  &__title {
+  text-align: left;
+  margin-bottom: .2rem;
+  }
+
+  &__progress-bar {
+    width: 100%;
+    background-color: $black-20;
+    border-radius: 3px;
+  }
+
+  &__progress-fill {
+    display: block;
+    background-color: $brand-color;
+    height: 1.5rem;
+    border-radius: 3px;
+  }
+
+}
+
