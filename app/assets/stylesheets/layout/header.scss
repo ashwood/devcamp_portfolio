@@ -8,6 +8,9 @@
   &__link {
     @include list-reset;
     display: inline-block;
+  }
+
+  &__link {
     @include hover-underline;
   }
 

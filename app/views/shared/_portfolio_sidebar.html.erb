@@ -3,6 +3,7 @@
   <h1 class="sidebar__brand">Devcamp Portfolio</h1>
   <p class="sidebar__description">Welcome to my portfolio.</p>
 
+  <div class="sidebar__nav-container">
   <div class="sidebar__nav">
     <p class="sidebar__title">Technologies</p>
       <ul class="sidebar__list">
@@ -22,9 +23,8 @@
   </div>
 
   <%= render 'shared/sidebar_icons' %>
-
-  <div class="sidebar__nav">
-      <%= source_helper("portfolio") %>
   </div>
+
+  <%= source_helper "sidebar__link--active", "sidebar__nav" %>
 
 </nav>
