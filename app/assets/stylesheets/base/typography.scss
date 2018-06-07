@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,700|Cormorant:200,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=lato:200,400,700|Times+New+Roman:200,400,400i,700');
 
 @mixin sans-serif-font {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 @mixin serif-font {
-  font-family: 'Cormorant', serif;
+  font-family: 'Times New Roman', serif;
 }
 
 body {
