@@ -2,7 +2,7 @@
 @import 'abstracts/*';
 @import 'base/*';
 @import 'components/*';
-@import 'layout/header';
+@import 'layout/application-header';
 @import 'layout/footer';
 @import 'pages/application-pages';
 
@@ -16,29 +16,5 @@ html {
 }
 
 .main {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background: linear-gradient($black-60, $black-60),
-                url(mountains.jpeg);
-  background-position: top;
-  background-size: cover;
-}
 
-
-#background {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background-size: cover;
 }

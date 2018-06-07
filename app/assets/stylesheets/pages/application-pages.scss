@@ -1,8 +1,91 @@
 .entry {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient($black-60, $black-60),
+              url(mountains.jpeg);
+  background-position: top;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+/* home page */
+
+.home-container {
+  grid-column: 2 / span 1;
+}
+
+.home {
 
   &__title {
-    text-transform: uppercase;
-    letter-spacing: .2rem;
+    font-weight: 200;
+    @include sans-serif-font;
+
+    &::after {
+      border-bottom: 1px solid $white-70;
+      content: " ";
+      display: block;
+      margin: 5rem auto 5rem auto;
+      width: 100px;
+    }
+  }
+
+  &__logo {
+    margin: 0 0 4rem 0;
+    opacity: .7;
+  }
+}
+
+/* contact page */
+
+.contact-container {
+  grid-column: 2 / span 1;
+}
+
+.contact {
+
+  &__title {
+    font-weight: 200;
+    @include sans-serif-font;
+
+    &::after {
+      border-bottom: 1px solid $white-70;
+      content: " ";
+      display: block;
+      margin: 5rem auto 5rem auto;
+      width: 100px;
+    }
+  }
+
+  &__subtitle {
+    margin: 2rem 0 0 0;
+    + .button {
+      margin: 6rem 0 0 0;
+    }
+  }
+}
+
+/* about page */
+
+.about-container {
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, minmax(auto, 44.8rem)) 1fr;
+  grid-gap: 4rem;
+  align-items: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr minmax(auto, 44.8rem) 1fr;
+  }
+}
+
+.about {
+  grid-column: 2 / span 1;
+
+  &__title {
+    font-weight: 200;
+    @include sans-serif-font;
 
     &::after {
       border-bottom: 1px solid $white-70;
@@ -14,18 +97,20 @@
     + .button {
       margin: 6rem 0 0 0;
     }
-    }
+  }
 
   &__subtitle {
-      margin: 4rem 0 0 0;
-      width: 410px;
-      + .button {
-        margin: 6rem 0 0 0;
-      }
+    margin: 1rem 0 0 0;
+    + .button {
+      margin: 6rem 0 0 0;
     }
+  }
+}
 
-  &__logo {
-    margin: 0 0 4rem 0;
-    opacity: .7;
+.skills {
+  grid-column: 3 / span 1;
+
+  @include respond(tab-port) {
+    display: none;
   }
 }

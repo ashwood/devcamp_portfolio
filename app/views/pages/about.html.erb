@@ -1,20 +1,26 @@
 <div class="entry">
-  <h1 class="entry__title">About the app</h1>
-  <p class="entry__subtitle">Devcamp portfolio is a sample portfolio application that includes a blog, a portfolio and an application page layout. Site administrators can sign in and build their own drag and drop portfolio, keep a blog and have a beautiful landing page to welcome their website visitors.</p>
-  <%= link_to "Check out my portfolio.", portfolios_path, class: "button button--short" %>
+  <div class="about-container">
 
-  <div class="skills-container">
-    <% @skills.each do |skill| %>
-      <div class="skill">
-        <p class="skill__title"><%= skill.title %></p>
-        <div class="skill__progress-bar">
-          <div class="skill__progress-fill" style="width: <%= skill.percent_utilized %>%;"></div>
+    <div class="about">
+      <h1 class="about__title">A little about it</h1>
+      <p class="about__subtitle">Devcamp portfolio is a sample portfolio application that includes a blog, a portfolio and an application page layout. Site administrators can sign in and build their own drag and drop portfolio, keep a blog and have a beautiful landing page to welcome their website visitors.</p>
+      <%= link_to "Check out my portfolio.", portfolios_path,
+          class: "button button--short" %>
+    </div>
+
+    <div class="skills">
+      <p class="about__subtitle">Percentage of languages used in building this app.</p>
+      <% @skills.each do |skill| %>
+        <div class="skill">
+          <p class="skill__title"><%= skill.title %></p>
+          <div class="skill__progress-bar">
+            <div class="skill__progress-fill"
+                 style="width: <%= skill.percent_utilized %>%;">
+            </div>
+          </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
 
   </div>
 </div>
-
-
-
