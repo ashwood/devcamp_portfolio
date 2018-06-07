@@ -6,6 +6,7 @@
   &__brand {
     @include center-align;
     @include serif-font;
+    letter-spacing: 0.2rem;
   }
 
   &__brand-image {

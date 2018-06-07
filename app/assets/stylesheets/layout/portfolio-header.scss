@@ -1,0 +1,102 @@
+.header {
+  @include sans-serif-font;
+  position: fixed;
+  width: 100%;
+  z-index: 25;
+
+  &__item,
+  &__link {
+    @include list-reset;
+    display: inline-block;
+  }
+
+  &__link {
+    @include hover-underline;
+  }
+
+  &__logo {
+    height: 4rem;
+    margin-right: 2rem;
+  }
+
+  &__brand-group {
+    display: none;
+
+    @include respond(tab-land) {
+      display: block;
+      grid-column: 2 / span 1;
+    }
+  }
+
+  &__title {
+    @include sans-serif-font;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    opacity: .6;
+    margin: 2rem 0 .5rem 0;
+  }
+
+  &__button {
+    display: none;
+    visibility: hidden;
+    padding: 1rem;
+    position: absolute;
+    color: inherit;
+    top: 2rem;
+    right: 3rem;
+
+    &::after {
+      visibility: visible;
+      content: 'MENU';
+      opacity: 0.8;
+      font-size: 1.6rem;
+      font-weight: 100;
+      padding: 1rem 1rem 0.8rem 1rem;
+      border-radius: 3px;
+    }
+
+    @include respond(tab-port) {
+      display: block;
+      z-index: 25;
+    }
+  }
+
+  &--portfolio {
+    background-color: white;
+    width: 100%;
+
+    .header__item,
+    .header__link {
+      display: block;
+      margin-top: .5rem;
+    }
+
+    .header__button {
+      display: block;
+      top: 2rem;
+      right: 3%;
+
+      &::after {
+        background-color: white;
+        opacity: .9;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+.portfolio-nav {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+
+  &__list {
+    @include list-reset;
+    display: none;
+    list-style: none;
+    margin-right: 2rem;
+    padding: 4rem 0 7rem 2.5rem;
+  }
+}
