@@ -19,7 +19,7 @@ html {
   min-height: 100vh;
   width: 100vw;
   background: linear-gradient($black-60, $black-60),
-              url(mountains.jpeg);
+              image_url('mountains.jpeg');
   background-position: top;
   background-size: cover;
   display: grid;
