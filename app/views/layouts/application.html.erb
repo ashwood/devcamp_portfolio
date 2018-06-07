@@ -21,7 +21,9 @@
       <%= render 'shared/application_nav' %>
 
         <div class="main">
-          <%= yield %>
+          <div class="main__inner <%= page_column_helper %>">
+            <%= yield %>
+          </div>
         </div>
 
       <%= alerts %>

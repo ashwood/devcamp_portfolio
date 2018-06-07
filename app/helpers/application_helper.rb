@@ -74,4 +74,10 @@ module ApplicationHelper
   def alert_generator msg
     js add_gritter(msg, title: "Devcamp Portfolio", sticky: false)
   end
+
+  def page_column_helper
+    @page_column == "col-2" ? "main__inner--col-2" : ""
+  end
 end
+
+
