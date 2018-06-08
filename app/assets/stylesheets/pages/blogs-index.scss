@@ -1,25 +1,10 @@
 .blogs-container {
   grid-column: 2 / span 1;
-  display: grid;
-  grid-gap: 4rem;
-  grid-template-columns: repeat(2, minmax(auto, 54.8rem));
-  grid-template-rows: minmax(auto, max-content);
-
-  @include respond(tab-land) {
-    grid-template-columns: 1fr 1fr;
-  }
-
- @include respond(tab-port) {
-    grid-template-columns: minmax(auto, 54.8rem);
-    justify-content: center;
-  }
 }
 
 .blog-card {
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.05);
-  padding: 5rem 5rem;
+  box-sizing: border-box;
+  padding: 5rem 0;
 
   &__title {
     @include serif-font;
@@ -56,6 +41,10 @@
   @include card-button;
 
   &__add-new {
+    display: none;
+    height: 45rem;
+    width: 100%;
+    margin: 1.5rem 0;
     opacity: 0.5;
     background-color: white;
     box-shadow: 0 4px 20px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.12);

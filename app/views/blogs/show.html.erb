@@ -1,10 +1,8 @@
-
-
 <div class="blog">
 
   <nav class="breadcrumb">
     <%= link_to 'Home', root_path, class: "breadcrumb__item" %>
-    <%= link_to 'Blog', blog_path, class: "breadcrumb__item" %>
+    <%= link_to 'Blog', blogs_path, class: "breadcrumb__item" %>
     <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb__item" %>
     <span class="breadcrumb__item breadcrumb__item--active">
       <%= truncate(@blog.title) %>

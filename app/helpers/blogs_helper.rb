@@ -5,7 +5,7 @@ module BlogsHelper
   end
 
   def truncate_helper text, path, style = ''
-    truncate(text, length: 275) { link_to "(continued)", path, class: "#{style}" }
+    truncate(text, length: 675) { link_to "(continued)", path, class: "#{style}" }
   end
 
   class CodeRayify < Redcarpet::Render::HTML
@@ -26,10 +26,6 @@ module BlogsHelper
 
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
-  end
-
-  def grid_type
-    @grid_type ? 'modular-grid' : 'column-grid'
   end
 
   def blog_status_toggle(blog)

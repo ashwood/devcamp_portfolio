@@ -24,17 +24,7 @@ html {
   padding: 0 2rem;
 }
 
-.modular-grid {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto, 90rem) 1fr 26rem 1fr;
-  grid-column-gap: 3rem;
-
-  @include respond(tab-land) {
-    grid-template-columns: 1fr minmax(auto, 90rem) 1fr;
-  }
-}
-
-.column-grid {
+.main__inner {
   display: grid;
   grid-template-columns: 1fr minmax(auto, 44.8rem) 22rem 22rem 1fr;
 
